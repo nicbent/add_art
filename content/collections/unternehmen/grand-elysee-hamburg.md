@@ -1,0 +1,59 @@
+---
+id: 4584eb44-3467-46ec-a960-0840b3ddfddb
+blueprint: unternehman
+title: 'Grand Elysée Hamburg'
+updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
+updated_at: 1681808735
+adresse_t: 'Rothenbaumchaussee 10, 20148 Hamburg'
+oeffnungszeiten: 'Mo -Fr 8 -18h'
+bild_unternehmen: a-peak.jpg
+bild_kunst: milkyway.jpg
+text:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Die Agentur '
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: giraffentoast
+      -
+        type: text
+        text: ' design wurde im Jahr 2000 als Videokunst-Kollektiv gegründet und betreut heute als Design- und Motion-Graphics- Spezialist in Hamburg und Berlin Kunst- und Kulturinstitutionen wie Deichkind, die Elbphilharmonie oder das K20/K21. Bei der Projektarbeit spielen die unkonventionellen und experimentellen Wurzeln aus den Anfängen der Agentur eine wichtige Rolle - ein Grund dafür, dass es, nach diversen eigenen Ausstellungen mit von giraffentoast initiierten Projekten, seit 2022 die giraffentoast gallery in Hamburg gibt.'
+grosses_bild: grand_elysee_web.jpg
+kleines_bild: andre_krigar.jpg
+teilnahmejahr:
+  - '2022'
+logo: ge_logo.svg
+bilder_unternehmen:
+  - grand_elysee_web-1681310786.jpg
+  - elysee1.jpg
+  - grand_elysee_innen.jpg
+beschreibung_unternehmen:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: "Das\_"
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: "Grand Elysée Hamburg\_"
+      -
+        type: text
+        text: 'ist das größte Fünf-Sterne-Privathotel Deutschlands und Treffpunkt für Gäste aus aller Welt. Es verfügt über 511 Zimmer und Suiten sowie eine große gastronomische Vielfalt mit drei Restaurants, der Bourbon Street Bar, dem Boulevard Café und der Top Seven Bar auf dem Dach. Das Haus besitzt 30 Veranstaltungsräume, einen Wellness- und Spa-Bereich, einen Kindergarten sowie eine Galerie. Gründer des Hotels ist der Hamburger Unternehmer Eugen Block.'
+adresse:
+  street: 'Rothenbaumchaussee 10'
+  postCode: '20148'
+  city: Hamburg
+  latitude: '53.563390999999996'
+  longitude: '9.990609501570518'
+  country: DE
+---

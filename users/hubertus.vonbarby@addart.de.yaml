@@ -1,0 +1,12 @@
+roles:
+  - manager
+id: bf6cd2c7-f249-4ab2-b19e-144902ee87c0
+password_hash: $2y$10$0dCRg3JqEgLgqCiozLW2Fex8oPnSnhfLzARpwvLYIvMiNeJStkb8S
+preferences:
+  collections:
+    unternehmen:
+      columns:
+        - title
+        - logo
+        - teilnahmejahr
+        - ausgestellte_kuenstler

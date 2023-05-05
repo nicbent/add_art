@@ -1,0 +1,42 @@
+<div class="grid md:grid-cols-2 md:gap-x-4 md:w-1/2 md:even:text-right md:even:self-end group" id="{{ ueberschrift }}">
+    
+    
+    <div class="flex items-end z-10 md:group-even:justify-end md:group-even:-mr-8 md:group-odd:col-start-2 md:group-odd:row-start-1 md:group-odd:-ml-8">
+        <h3 class="heading-3">{{ ueberschrift }}</h3>
+    </div>
+
+    <div class="relative flex flex-col row-span-2 ">
+        <!-- -->
+        <div class="relative w-4/5 
+        group-odd:self-end 
+        group-even:self-start">
+            <div class="ratio-4/5">
+                {{ grosses_bild }}
+                <img src="{{ url }}" alt="{{ alt }}">
+                {{ /grosses_bild }}
+            </div>
+        </div>
+        <div class="relative w-3/4 -mt-16
+        group-odd:self-start 
+        group-even:self-end">
+            <div class="ratio-4/3">
+                {{ kleines_bild }}
+                <img src="{{ url }}" alt="{{ alt }}">
+                {{ /kleines_bild }}
+            </div>
+        </div>
+        <!-- -->
+    </div>
+
+    <div class="flex flex-col md:group-odd:items-start md:group-even:items-end">
+        <div class="relative">
+            {{ text }}
+        </div>
+        {{if button_link }}
+        <a href="{{button_link:url}}" class="btn btn-black mt-8">{{button_label}}</a>
+        {{/if}}
+
+    </div>
+</div>
+
+

@@ -1,0 +1,336 @@
+/* If you don't want to use the JS in CSS syntax from `tailwind.config.site.js` you can add your own custom CSS here. Use different layers to make sure your CSS either get's purged or not: https://tailwindcss.com/docs/functions-and-directives#layer. CSS in the base layer won't get purged. */
+
+:root {
+  --a-button-w: 300px;
+  --a-stroke: 8px;
+  --blend-top: color;
+  --color-v: yellow;
+  --blend-bottom: color;
+  --color: yellow;
+}
+
+@layer base {
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Anton', sans-serif;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+  }
+}
+
+
+@layer components {
+
+  .btn {
+    @apply px-6 py-2 uppercase font-headings transition-colors duration-300 transform
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-lg
+  }
+
+  .btn-primary {
+    @apply text-black bg-primary border-2 border-primary hover:bg-transparent hover:text-primary
+  }
+
+  .btn-black {
+    @apply text-primary bg-black border-2 border-black hover:bg-transparent hover:text-black
+  }
+
+
+}
+
+@layer utilities {}
+
+
+
+/* Slider */
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.splide__arrow {
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  height: 2em;
+  justify-content: center;
+  opacity: .5;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2em;
+  z-index: 1;
+}
+
+.splide__arrow:hover {
+  opacity: .9;
+}
+
+.splide__arrow svg {
+  fill: #000;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.splide__arrow--prev {
+  left: 1em;
+}
+
+.splide__arrow--prev svg {
+  transform: scaleX(-1);
+}
+
+.splide__arrow--next {
+  right: 1em;
+}
+
+
+.splide__pagination {
+  bottom: 1em;
+  left: 0;
+  padding: 0 1em;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.splide__pagination__page.is-active {
+  background: #F2D70E;
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+.splide__pagination__page {
+  background: transparent;
+  border: 2px solid #F2D70E;
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  margin: 3px;
+  opacity: .7;
+  padding: 0;
+  position: relative;
+  transition: transform .2s linear;
+  width: 8px;
+}
+
+/* End Slider */
+
+
+
+
+.heading-xl {
+  font-size: 3rem;
+  font-size: clamp(3rem, 2.4rem + 3vw, 6rem);
+  @apply leading-tight lowercase
+
+}
+
+.heading-lg {
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
+  @apply leading-tight lowercase
+
+}
+
+.heading-md {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
+  @apply leading-tight lowercase
+
+}
+
+.heading-sm {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+  @apply leading-tight lowercase
+
+}
+
+
+
+
+/* 🍔 Hamburger 🍔 */
+.hamburger {
+  @apply absolute left-4 flex items-center justify-end lg:hidden z-50;
+}
+
+.hamburger-btn {
+  @apply relative flex flex-col items-center justify-center focus:outline-none;
+}
+
+.hamburger-btn>span {
+  @apply block absolute w-full h-[3px] transition first:-translate-y-2 last:translate-y-2 bg-black;
+}
+
+.is-open .hamburger .hamburger-btn>span {
+  @apply origin-center opacity-0 first:opacity-100 first:-rotate-45 first:translate-y-0 last:opacity-100 last:translate-y-0 last:rotate-45 bg-black;
+}
+
+/* End */
+
+header {
+  color: #000;
+  background-color: #fff;
+}
+
+header.is-top {
+  color: #fff;
+  background-color: transparent;
+}
+
+header.is-top .hamburger-btn>span{
+  background-color: #fff;
+}
+
+
+
+/* Single Item */
+.s-item {
+  @apply grid grid-cols-2
+}
+
+.s-item:nth-of-type(even) {
+  @apply text-right self-end
+}
+
+.s-item .s-title {
+  @apply flex items-end z-10
+}
+
+.s-item:nth-of-type(even) .s-title {
+  @apply justify-end
+}
+
+.s-item:nth-of-type(odd) .s-title {
+  @apply col-start-2 row-start-1
+}
+
+
+.s-item .s-images {
+  @apply relative flex flex-col row-span-2
+}
+
+.s-item:nth-of-type(odd) .s-images {
+  @apply col-start-1
+}
+
+.s-item:nth-of-type(odd) .s-images :nth-child(1) {
+  @apply self-end
+}
+.s-item:nth-of-type(even) .s-images :nth-child(1) {
+  @apply self-start
+}
+
+.s-item:nth-of-type(odd) .s-images :nth-child(2) {
+  @apply self-start
+}
+.s-item:nth-of-type(even) .s-images :nth-child(2) {
+  @apply self-end
+}
+
+.s-item:nth-of-type(even) .s-body {
+  @apply items-end
+}
+
+.s-item:nth-of-type(odd) .s-body {
+  @apply items-start
+}
+
+/* End Single Item */
+
+
+
+
+
+.addart-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-color: #fff;
+  background-position: center;
+  background-blend-mode: multiply, luminosity;
+}
+
+
+
+/* masonry grid styles */
+.grid--masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, Min(30em, 100%));
+	grid-template-rows: masonry;
+	justify-content: center;
+	grid-gap:.5em;
+	padding: .5em;
+	}
+
+
+  .grid--masonry > * { width: Min(30em, 100%) }
+
+
+
+
+  /* MAGAZIN */
+.mag-text>p {@apply mb-4}
+.mag-text>h5 ~ p { color: dimgray }
+/* END MAGAZIN */
+
+
+/* IMAGE RATIOS */
+div[class*="ratio-"] {
+  position: relative;
+  overflow: hidden;
+}
+
+div[class*="ratio-"] img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.ratio-4\/5 {
+  padding-top: calc((5 / 4) * 100%);
+}
+
+.ratio-4\/3 {
+  padding-top: calc((3 / 4) * 100%);
+}
+
+.ratio-1\/1 {
+  padding-top: calc((1 / 1) * 100%);
+}
+/* IMAGE RATIOS */
+
+
+/* ANNOUNCE */
+
+.announce {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.6153846153846154rem + 1.9230769230769231vw, 2rem);;
+}
+
+/* end ANNOUNCE */

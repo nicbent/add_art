@@ -1,0 +1,43 @@
+sections:
+  main:
+    display: Hauptteil
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: stationen
+        field:
+          mode: default
+          create: false
+          collections:
+            - unternehmen
+          display: Stationen
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: dauer_rundgang
+        field:
+          seconds_enabled: false
+          display: 'Dauer Rundgang'
+          type: time
+          icon: time
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+title: Rundgänge

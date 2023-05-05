@@ -1,0 +1,17 @@
+title: 'Zugehörige Einträge'
+fields:
+  -
+    handle: eintraege
+    field:
+      mode: default
+      create: false
+      collections:
+        - unternehmen
+        - kuenstler
+        - rundgaenge
+      display: Einträge
+      type: entries
+      icon: entries
+      listable: hidden
+      instructions_position: above
+      visibility: visible

@@ -1,0 +1,59 @@
+sections:
+  main:
+    display: Hauptteil
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          width: 75
+          validate:
+            - required
+      -
+        handle: kuenstler_beschreibung
+        field:
+          collapse: false
+          always_show_set_button: false
+          previews: true
+          smart_typography: false
+          buttons:
+            - bold
+          save_html: false
+          inline: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: false
+          allow_source: false
+          enable_input_rules: false
+          enable_paste_rules: false
+          antlers: false
+          remove_empty_nodes: false
+          display: 'Künstler Beschreibung'
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        import: bildergalerie
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: teilnahmejahr
+        field:
+          type: terms
+          taxonomies:
+            - teilnahmejahr
+          display: Teilnahmejahr
+          mode: select
+title: Künstler

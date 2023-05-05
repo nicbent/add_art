@@ -1,0 +1,14 @@
+title: Absatz
+fields:
+  -
+    handle: absatz-typ
+    field:
+      options:
+        eine_spalte: 'Eine Spalte'
+        zwei_spalten: 'Zwei Spalten'
+      display: Absatz-Typ
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible

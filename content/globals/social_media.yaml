@@ -1,0 +1,15 @@
+title: 'Social media'
+data:
+  social_media:
+    -
+      id: lfqm4abo
+      handle: Facebook
+      prefix: 'https://www.facebook.com/'
+      type: facebook
+      enabled: true
+    -
+      id: lfqmfk97
+      handle: Instagram
+      prefix: 'https://www.instagram.com/'
+      type: instagram
+      enabled: true

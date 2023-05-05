@@ -1,0 +1,38 @@
+---
+id: 9c1341a0-7577-47cf-a31d-65c3b8f7aa5e
+blueprint: unternehman
+title: 'vangard | Littler'
+adresse_t: 'Neuer Wall 43, 20354 Hamburg'
+updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
+updated_at: 1681809007
+logo: vl_logo.svg
+teilnahmejahr:
+  - '2022'
+bilder_unternehmen:
+  - vangard1.jpg
+  - vangard2.jpg
+  - vangard3.jpg
+beschreibung_unternehmen:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'vangard | Littler'
+      -
+        type: text
+        text: "\_ist eine ambitionierte Kanzlei für eine ambitionierte Zeit. Ihre progressiven Denkansätze sind das Ergebnis juristischer Exzellenz, gepaart mit langjähriger Erfahrung und dem Blick fürs Wesentliche. Inspiriert vom französischen „avantgarde“ machen sie den eigenen Namen zum Programm und beraten ihre Mandanten in ganz Deutschland und weit darüber hinaus."
+ausgestellte_kuenstler:
+  - c5bb2391-d0b0-49f0-ae56-1b19f2440f59
+  - 53ab8c35-b3d5-4809-9b13-399e20a2edd8
+adresse:
+  street: 'Neuer Wall 43'
+  postCode: '20354'
+  city: Hamburg
+  latitude: '53.5511614'
+  longitude: '9.9896684'
+  country: DE
+---

@@ -1,0 +1,17 @@
+title: Bildergalerie
+fields:
+  -
+    handle: bildergalerie
+    field:
+      fields:
+        -
+          import: bild_mit_bu
+      mode: stacked
+      reorderable: true
+      display: Bildergalerie
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      add_row: 'Bild hinzufügen'

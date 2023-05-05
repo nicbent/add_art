@@ -1,0 +1,16 @@
+title: Slider
+fields:
+  -
+    handle: slider
+    field:
+      fields:
+        -
+          import: slider_item
+      mode: table
+      reorderable: true
+      display: Slider
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible

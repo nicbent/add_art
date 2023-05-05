@@ -1,0 +1,37 @@
+---
+id: 6d3d61b9-c075-4d1f-b0ca-79299e1c79ab
+blueprint: unternehman
+title: 'LEBUHN & PUCHTA'
+adresse_t: 'Am Sandtorpark 2, 20457 Hamburg'
+updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
+updated_at: 1681808882
+logo: lp_logo.png
+teilnahmejahr:
+  - '2022'
+bilder_unternehmen:
+  - lebuhn___puchta_1.jpg
+  - lebuhn___puchta_2.jpg
+beschreibung_unternehmen:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'LEBUHN & PUCHTA'
+      -
+        type: text
+        text: "\_ist eine führende Hamburger Anwaltskanzlei im maritimen Wirtschaftsrecht. Als alteingesessenes Hamburger Unternehmen möchte LEBUHN & PUCHTA mit der Förderung von Nachwuchskünstler/-innen einen Beitrag zum Kunststandort in Hamburg leisten und Inspiration und Kreativität in der Wirtschaft verankern. Mit Schwerpunkten im Schifffahrts-, Versicherungs- und Gesellschaftsrecht ist die Kanzlei ein wichtiger Berater für mittelständische und weltweit operierende Unternehmen der Schifffahrtsbranche. Mit ihrem Fokus auf Innovation und Exzellenz setzt die Kanzlei besonders auf die Schnittstelle zwischen Technologie und Litigation"
+ausgestellte_kuenstler:
+  - 18995960-ca1a-49ae-833c-74f73f42fdae
+  - 48907d9f-1504-4e7c-b3ba-1c61e9f92b97
+adresse:
+  street: 'Am Sandtorpark 2'
+  postCode: '20457'
+  city: Hamburg
+  latitude: '53.5427275'
+  longitude: '9.995240600340464'
+  country: DE
+---

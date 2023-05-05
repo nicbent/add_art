@@ -1,0 +1,36 @@
+sections:
+  main:
+    display: Hauptteil
+    fields:
+      -
+        handle: naechste_add_art
+        field:
+          mode: single
+          time_enabled: true
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Nächste add art:'
+          type: date
+          icon: date
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: content_from_year
+        field:
+          max_items: 1
+          mode: select
+          create: true
+          taxonomies:
+            - teilnahmejahr
+          display: 'Inhalte anzeigen aus dem Jahr:'
+          type: terms
+          icon: taxonomy
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible

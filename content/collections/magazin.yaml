@@ -1,0 +1,15 @@
+title: Magazin
+template: magazin/show
+layout: layout
+mount: fa9f68f0-5b7e-4848-b0cb-7427791dc119
+revisions: false
+route: '/{mount}/{month}-{year}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'

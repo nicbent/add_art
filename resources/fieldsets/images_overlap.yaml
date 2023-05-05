@@ -1,0 +1,34 @@
+title: 'Images Overlap'
+fields:
+  -
+    handle: grosses_bild
+    field:
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: false
+      max_files: 1
+      display: 'Großes Bild'
+      type: assets
+      icon: assets
+      width: 66
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: kleines_bild
+    field:
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: false
+      max_files: 1
+      display: 'Kleines Bild'
+      type: assets
+      icon: assets
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible

@@ -1,0 +1,99 @@
+title: Kachel
+fields:
+  -
+    handle: ueberschrift
+    field:
+      input_type: text
+      antlers: false
+      display: Ueberschrift
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      width: 50
+  -
+    handle: groesse
+    field: common.groesse
+    config:
+      width: 25
+  -
+    handle: bild
+    field:
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: false
+      display: Bild
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      width: 33
+      max_files: 1
+  -
+    handle: hintergrund
+    field: common.hintergrund
+    config:
+      options:
+        bg-primary: Primär
+        bg-black: Schwarz
+        bg-white: Weiß
+        bg-transparent: Transparent
+      width: 33
+  -
+    handle: text
+    field:
+      collapse: false
+      always_show_set_button: false
+      previews: true
+      smart_typography: false
+      buttons:
+        - bold
+        - italic
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: false
+      allow_source: false
+      enable_input_rules: false
+      enable_paste_rules: false
+      antlers: false
+      remove_empty_nodes: false
+      display: Text
+      type: bard
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: button_label
+    field:
+      input_type: text
+      antlers: false
+      display: 'Button Label'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: button_link
+    field:
+      mode: default
+      create: false
+      display: 'Button Link'
+      type: entries
+      icon: entries
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      width: 50
+      max_items: 1

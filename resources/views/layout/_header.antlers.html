@@ -1,0 +1,32 @@
+<header class="header sticky top-0 w-full z-50" x-data="{ isTop: true }" {{ if is_homepage }}:class="{ 'is-top': isTop, }" @scroll.window="isTop = (window.pageYOffset < 96) ? true: false" {{ /if }}>
+
+    <nav class="flex h-24 justify-center items-center" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" :class="{ 'is-open': isOpen}">
+
+        <!--🍔 Hamburger 🍔 -->
+        <div class="hamburger p-2" @click="isOpen = !isOpen">
+            <button class="hamburger-btn h-8 w-8">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- End Hamburger -->
+
+
+        <div class="menu fixed lg:relative inset-0 lg:inset-auto lg:flex justify-center items-center mx-auto bg-white lg:bg-transparent" :class="{ 'flex': isOpen, 'hidden': !isOpen }">
+            <ul class="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-y-0">
+                {{ nav:main select="title|url" }}
+                <li class="px-3"><a class="text-xl lg:text-lg font-headings" href="{{ url }}">{{title }}</a></li>
+                {{ /nav:main }}
+            </ul>
+        </div>
+
+
+        <a class="absolute right-4 focus:outline-none focus-visible:ring-2 ring-primary" aria-label="Logo {{ config:app:name }}" href="{{ site:url }}">
+            <img src="/visuals/add-art-logo.png" class="select-none {{ class }}" width="48" alt="{{ config:app:name }}" />
+        </a>
+
+
+    </nav>
+
+</header>

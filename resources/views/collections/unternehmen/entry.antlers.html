@@ -1,0 +1,24 @@
+<section class="max-w-7xl mx-auto">
+
+    <div class="grid lg:grid-cols-2">
+
+        <div class="w-2/3 lg:w-full flex items-end lg:justify-end lg:text-right lg:row-span-1 z-10">
+            <h1 class="overlap-title">{{ title }}</h1>
+        </div>
+
+
+        <div class="relative flex flex-col lg:row-span-2 ml-8 lg:ml-0 -mt-6 lg:mt-0">
+            {{ logo }}
+            <img class="absolute right-0 z-10 w-42" src="{{ url }}" alt="{{ alt }}">
+            {{ /logo }}
+
+            {{ partial:components/images_overlap}}
+        </div>
+
+        <div class="flex flex-col items-center">
+            {{ partial:components/unternehmen_info}}
+        </div>
+
+    </div>
+
+</section>

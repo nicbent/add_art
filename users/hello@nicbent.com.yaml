@@ -1,0 +1,20 @@
+name: nicbent
+super: true
+id: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
+password_hash: $2y$10$2DSYd8KvD.gJyWxEc30cE.4JT8738bY51U7MNIzDCqJ8NK/2aYlXm
+preferences:
+  collections:
+    unternehmen:
+      columns:
+        - title
+        - teilnahmejahr
+        - slug
+        - logo
+        - ausgestellte_kuenstler
+    kuenstler:
+      columns:
+        - title
+        - teilnahmejahr
+        - slug
+    magazin:
+      per_page: 100

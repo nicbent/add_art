@@ -1,0 +1,165 @@
+title: 'Call to Action Element'
+fields:
+  -
+    handle: typ
+    field:
+      options:
+        einzelbild: Einzelbild
+        doppelbild: Doppelbild
+        beitraege: Beiträge
+        zitat: Zitat
+      display: Typ
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      default: einzelbild
+      width: 50
+  -
+    handle: ausrichtung
+    field: common.ausrichtung
+    config:
+      width: 25
+      default: start
+  -
+    handle: reverse
+    field:
+      default: false
+      display: 'umdrehen?'
+      type: toggle
+      icon: toggle
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: grosses_bild
+    field:
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: false
+      max_files: 1
+      display: 'Großes Bild'
+      type: assets
+      icon: assets
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        typ: 'contains_any einzelbild, doppelbild, zitat'
+  -
+    handle: kleines_bild
+    field:
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: false
+      max_files: 1
+      display: 'Kleines Bild'
+      type: assets
+      icon: assets
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        typ: 'contains_any doppelbild'
+  -
+    handle: zitat
+    field:
+      input_type: text
+      antlers: false
+      display: Zitat
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        typ: 'contains_any zitat'
+  -
+    handle: beitraege
+    field:
+      max_items: 1
+      mode: select
+      display: Beiträge
+      type: collections
+      icon: collections
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        typ: 'contains_any beitraege'
+  -
+    handle: ueberschrift
+    field:
+      input_type: text
+      antlers: false
+      display: Überschrift
+      type: text
+      icon: text
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: text
+    field:
+      collapse: false
+      always_show_set_button: false
+      previews: true
+      smart_typography: false
+      buttons:
+        - bold
+        - italic
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: false
+      allow_source: false
+      enable_input_rules: false
+      enable_paste_rules: false
+      antlers: false
+      remove_empty_nodes: false
+      display: Text
+      type: bard
+      icon: bard
+      width: 66
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: button_link
+    field:
+      max_items: 1
+      mode: select
+      create: true
+      display: 'Button Link'
+      type: entries
+      icon: entries
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: button_label
+    field:
+      input_type: text
+      antlers: false
+      display: 'Button Label'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible

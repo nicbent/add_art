@@ -1,0 +1,13 @@
+title: Einträge
+fields:
+  -
+    handle: eintraege_feld
+    field:
+      mode: default
+      create: true
+      display: 'Einträge Feld'
+      type: entries
+      icon: entries
+      listable: hidden
+      instructions_position: above
+      visibility: visible

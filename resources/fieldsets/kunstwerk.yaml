@@ -1,0 +1,28 @@
+title: Kunstwerk
+fields:
+  -
+    handle: bild
+    field:
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: false
+      max_files: 1
+      display: Bild
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: bildunterschrift
+    field:
+      input_type: text
+      antlers: false
+      display: Bildunterschrift
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible

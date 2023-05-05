@@ -1,0 +1,21 @@
+<footer class="w-full flex flex-col items-center gap-4 md:flex-row-reverse md:justify-between bg-primary px-8 py-4 mt-16">
+    
+    {{ if social_media:social_media }}
+    <div class="flex space-x-2">
+        {{ social_media:social_media }}
+        <a class="p-3 bg-black rounded-full focus:outline-none" href="{{ prefix }}{{ handle }}"
+            rel="noopener{{ type == 'mastodon' ?= ' me' }}"
+            aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">{{
+            svg:src="type" class="w-4 h-4 overflow-visible fill-current" alt="" aria-hidden="true" }}</a>
+        {{ /social_media:social_media }}
+    </div>
+    {{ /if }}
+
+    {{ partial:navigation/footer }}
+
+    {{ yield:reset_cookie_consent }}
+
+    {{ partial:components/logo width="50" }}
+
+
+</footer>

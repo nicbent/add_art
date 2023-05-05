@@ -1,0 +1,20 @@
+<div class="mb-8">
+    {{lead}}
+</div>
+<div class="max-w-4xl mx-auto">
+    {{artikel}}
+    {{ if type == "text" }}
+    <div class="mag-text">
+        {{ text | raw }}
+    </div>
+
+    {{elseif type == "artikel_bild" }}
+    {{bild}}
+    <div class="flex items-center justify-center mb-8">
+        <img src="{{ url }}" alt="{{ alt }}">
+    </div>
+
+    {{/bild}}
+    {{/if}}
+    {{/artikel}}
+</div>

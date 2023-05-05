@@ -1,0 +1,40 @@
+---
+id: 4289f30a-1284-4066-a408-2175df0bb380
+blueprint: unternehman
+title: 'Kappich & Piel'
+adresse_t: 'Lagerstraße 34a, 20357 Hamburg'
+updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
+updated_at: 1681808841
+teilnahmejahr:
+  - '2022'
+logo: kappich_logo.png
+bilder_unternehmen:
+  - k_p_gebaeude_1.jpg
+  - k_p_gebaeude_2.jpg
+  - k_p_gebaeude_3.jpg
+ausgestellte_kuenstler:
+  - 7620883a-1175-4f3c-92fd-3266886ea62f
+beschreibung_unternehmen:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: "Seit 2009 ist\_"
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: "Kappich & Piel\_"
+      -
+        type: text
+        text: 'in den Schanzenhöfen ein Hotspot für Kunstliebhaber, Galeristen und Künstler. Das Team aus Tischlern, Vergoldern und Rahmenrestauratoren fertigt individuelle Rahmungen. Ebenso widmet man sich in der Werkstatt-Galerie dem Kunstverkauf. Geertje Foth ist geprüfte Gemälderestauratorin und arbeitet seit über 28 Jahren in ihrem Hamburger Atelier. Sie betreut private Sammlungen und berät beim Ankauf und Verkauf von Kunstwerken.'
+adresse:
+  street: 'Lagerstraße 34a'
+  postCode: '20357'
+  city: Hamburg
+  latitude: '53.5628101'
+  longitude: '9.9668585'
+  country: DE
+---

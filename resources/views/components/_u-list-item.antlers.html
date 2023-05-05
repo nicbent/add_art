@@ -1,0 +1,45 @@
+<div class="grid md:grid-cols-2 md:gap-x-8 md:even:text-right md:even:self-end group w-3/4 mt-16" id="{{ title }}">
+    
+    
+    <div class="flex items-end z-10 md:group-even:justify-end md:group-odd:col-start-2 md:group-odd:row-start-1">
+        <h3 class="heading-lg text-primary -mb-4 md:mb-2 md:group-even:translate-x-16 md:group-odd:-translate-x-16">{{ title }}</h3>
+
+    </div>
+
+    <div class="relative flex flex-col row-span-2 ">
+        <!-- -->
+        <div class="relative w-4/5 
+        group-odd:self-end 
+        group-even:self-start">
+        <div class="ratio-4/5">
+            {{bilder_unternehmen:0 }}
+            <img src="{{ url }}" alt="{{ alt }}">
+            {{/bilder_unternehmen:0}}
+        </div>
+        </div>
+        <div class="relative w-5/12 group-odd:self-start group-even:self-end">
+            {{ ausgestellte_kuenstler }}
+            {{
+                top = '-top-['+index * 10+'%]'
+                left = '-left-['+index * 25+'%]'
+            }}
+            {{bildergalerie:0}}
+            {{bild}}
+            <img src="{{ url }}" alt="{{ alt }}" class="hover:z-30 {{first ? 'relative' : 'absolute {{top}} {{left}}'}}">
+            {{/bild}}
+            {{/bildergalerie:0}}
+            {{ /ausgestellte_kuenstler }}
+        </div>
+        <!-- -->
+    </div>
+
+    <div class="flex flex-col items-center md:group-odd:items-start md:group-even:items-end">
+        <div class="relative">
+            <p>{{ beschreibung_unternehmen }}</p>
+        </div>
+        <a href="{{url}}" class="btn btn-primary mt-8">mehr infos</a>
+
+    </div>
+</div>
+
+

@@ -1,0 +1,66 @@
+title: Kacheln
+fields:
+  -
+    handle: spalten
+    field: common.spalten
+    config:
+      width: 25
+      default: '2'
+  -
+    handle: ausrichtung
+    field: common.ausrichtung
+    config:
+      width: 25
+      default: start
+  -
+    handle: shift
+    field:
+      default: false
+      display: 'versetzt?'
+      type: toggle
+      icon: toggle
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      if:
+        spalten: '> 1'
+  -
+    handle: revealer
+    field:
+      mode: toggle
+      display: 'Headline?'
+      type: revealer
+      icon: revealer
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: headline
+    field:
+      input_type: text
+      antlers: false
+      display: Headline
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      width: 50
+      if:
+        revealer: 'equals true'
+  -
+    handle: kachel
+    field:
+      fields:
+        -
+          import: kachel
+      mode: stacked
+      reorderable: true
+      display: Kachel
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible

@@ -1,0 +1,21 @@
+<div class="max-w-6xl mx-auto">
+    <section class="grid grid-cols-2">
+        <h1 class="heading-xl">{{ title }} {{ add_art_settings:content_from_year:title }}</h1>
+        <div class="flex gap-8">
+            <div class="flex flex-col mt-4">
+                {{ collection:unternehmen taxonomy:teilnahmejahr="{{ add_art_settings:content_from_year:title }}" }}
+                <a class="text-lg font-headings hover:underline" href="#{{title}}">{{ title }}</a>
+                {{ /collection:unternehmen }}
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto flex flex-col">
+        {{ collection:unternehmen taxonomy:teilnahmejahr="{{ add_art_settings:content_from_year:title }}" }}
+
+        {{ partial:components/u-list-item }}
+
+
+        {{ /collection:unternehmen }}
+    </section>
+</div>

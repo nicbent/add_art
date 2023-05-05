@@ -1,0 +1,49 @@
+title: 'add art specific'
+fields:
+  -
+    handle: year_select
+    field:
+      options:
+        2013: null
+        2014: null
+        2015: null
+        2016: null
+        2017: null
+        2018: null
+        2019: null
+        2020: null
+        2021: null
+        2022: null
+        2023: null
+        2024: null
+        2025: null
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: 'year select'
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: naechste_addart
+    field:
+      mode: single
+      time_enabled: false
+      time_seconds_enabled: false
+      full_width: false
+      inline: false
+      columns: 1
+      rows: 1
+      display: 'Nächste addArt'
+      type: date
+      icon: date
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      duplicate: false

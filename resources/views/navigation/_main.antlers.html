@@ -1,0 +1,16 @@
+{{#
+    @name Main navigation
+    @desc The sites main navigation rendered on each page. There's a desktop and a mobile version.
+#}}
+
+<div class="menu relative lg:flex justify-center max-w-7xl mx-auto" :class="{ 'block': isOpen, 'hidden': !isOpen }">
+
+    <ul class="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-y-0 py-3">
+        {{ nav:main }}
+        <li class="px-3"><a class="text-xl lg:text-lg {{ is_current || is_parent ?= 'font-medium text-black' }}"
+                href="{{ url }}">{{title }}</a></li>
+        {{ /nav:main }}
+    </ul>
+
+
+</div>
