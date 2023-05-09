@@ -201,6 +201,13 @@ header.is-top .hamburger-btn>span{
   background-color: #fff;
 }
 
+header.is-top .logo {
+@apply fill-white
+}
+.logo {
+  @apply focus:outline-none focus-visible:ring-2 ring-primary;
+}
+
 
 
 /* Single Item */
@@ -334,3 +341,27 @@ div[class*="ratio-"] img {
 }
 
 /* end ANNOUNCE */
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

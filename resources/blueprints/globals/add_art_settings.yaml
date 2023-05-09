@@ -5,8 +5,8 @@ sections:
       -
         handle: naechste_add_art
         field:
-          mode: single
-          time_enabled: true
+          mode: range
+          time_enabled: false
           time_seconds_enabled: false
           full_width: false
           inline: false
@@ -19,6 +19,7 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+          duplicate: false
       -
         handle: content_from_year
         field:

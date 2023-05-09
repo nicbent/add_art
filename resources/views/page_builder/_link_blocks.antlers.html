@@ -1,10 +1,4 @@
-{{#
-    @name Link blocks
-    @desc The link blocks page builder block.
-    @set page.page_builder.link_blocks
-#}}
 
-<!-- /page_builder/_link_blocks.antlers.html -->
 <section class="fluid-container grid md:grid-cols-12 gap-8">
     {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-3 md:col-span-8 text-center" } }}
 
@@ -35,4 +29,3 @@
         </a>
     {{ /block:link_blocks }}
 </section>
-<!-- End: /page_builder/_link_blocks.antlers.html -->

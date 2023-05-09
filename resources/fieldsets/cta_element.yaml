@@ -7,7 +7,6 @@ fields:
         einzelbild: Einzelbild
         doppelbild: Doppelbild
         beitraege: Beiträge
-        zitat: Zitat
       display: Typ
       type: button_group
       icon: button_group
@@ -69,20 +68,6 @@ fields:
       visibility: visible
       if:
         typ: 'contains_any doppelbild'
-  -
-    handle: zitat
-    field:
-      input_type: text
-      antlers: false
-      display: Zitat
-      type: text
-      icon: text
-      width: 50
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      if:
-        typ: 'contains_any zitat'
   -
     handle: beitraege
     field:

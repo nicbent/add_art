@@ -1,0 +1,50 @@
+<div class="relative py-28 -mt-24 px-4">
+
+    <div class="absolute top-0 left-0 w-full h-full -z-10">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                {{ slider }}
+                <div class="swiper-slide">
+                    <div class="addart-bg"
+                        style="background-image:linear-gradient(0deg, #F2D70E, #F2D70E  ),url({{image:url}})"></div>
+                </div>
+                {{ /slider }}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="relative max-w-6xl mx-auto min-h-[50vh]">
+
+        
+
+        <span class="absolute top-0 w-full h-2 bg-white"></span>
+        <span class="absolute top-0 right-0 w-2 h-full bg-white"></span>
+        <span class="absolute bottom-0 w-full h-2 bg-white"></span>
+
+
+        <div class="text-center p-8">
+            <h3 class="heading-xl mb-4 text-white">Ankündigung</h3>
+            <p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, animi fugiat saepe
+                voluptates harum, quos quibusdam minus odit sed molestiae expedita commodi, earum id dignissimos
+                incidunt laborum sunt alias laudantium.</p>
+        </div>
+
+        {{ partial:components/save_date}}
+
+
+
+    </div>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+
+            autoplay: {
+                delay: 7500,
+            },
+            effect: 'fade'
+        });
+    </script>
+
+</div>

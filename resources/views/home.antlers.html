@@ -1,35 +1,6 @@
-{{#
-@name Home
-#}}
-
-<div class="hero relative -mt-24 -mx-4 px-[7.5%] py-24">
-
-    <div class="addart-bg" style="background-image:linear-gradient(0deg, #F2D70E, #F2D70E  ),url({{hero_bild:url}})"></div>
-    <div class="relative flex justify-center items-center max-w-6xl mx-auto">
-        <div class="addart-bg" style="background-image:linear-gradient(0deg, #F2D70E, #F2D70E  ),url({{hero_bild:url}})"></div>
-
-           <span class="absolute top-0 w-full h-2 bg-white"></span>
-           <span class="absolute top-0 left-0 w-2 h-full bg-white"></span>
-           <span class="absolute top-0 right-0 w-2 h-full bg-white"></span>
-
-
-   
-           <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/aAitvreFKhg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="false" frameborder="0"></iframe>
-   
-        <a href="#" class="absolute heading-xl text-white/90 transform transition-transform hover:scale-110">&#9654;</a>
-
-        {{ partial:components/countdown}}
-        {{ partial:components/save_date}}
-
-        
-
-    </div>
-
-</div>
 
 <div class="max-w-6xl mx-auto">
     {{ page_builder scope="block" }}
-     {{ partial src="page_builder/{type}" }}
+    {{ partial src="page_builder/{type}" }}
     {{ /page_builder }}
 </div>
-

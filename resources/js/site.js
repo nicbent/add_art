@@ -9,14 +9,7 @@ import Splide from '@splidejs/splide';
 import '@splidejs/splide/css/core';
 
 
-var splide = new Splide( '.splide', {
-    perPage: 4,
-    rewind : true,
-    gap: '0.5rem',
-    height: '682px'
-  } );
-  
-  splide.mount();
+
 
 // Global get CSRF token function (used by forms).
 window.getToken = async () => {

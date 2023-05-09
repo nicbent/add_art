@@ -1,0 +1,59 @@
+<div class="max-w-6xl mx-auto mb-16">
+    {{if hero_image }}
+
+    <div class="grid gap-x-4 md:grid-cols-5">
+
+        <div
+            class="z-10 flex -mb-6 md:mb-0 md:-mr-12 md:col-span-2 md:justify-end {{unterzeile ? 'md:items-end':'items-center row-span-2' }}">
+            <h1 class="heading-xl text-right w-96 hyphens-auto">{{ title }}</h1>
+        </div>
+
+        <div class="relative flex flex-col md:col-span-3 md:row-span-2">
+            <div class="ratio-4/3">
+                {{ hero_image }}
+                <img src="{{ url }}" alt="{{ alt }}">
+                {{ /hero_image }}
+            </div>
+        </div>
+
+        {{if unterzeile }}
+
+        <div class="flex flex-col md:items-end md:col-span-2">
+            <div class="relative heading-sm font-bold md:w-1/2 mt-4 text-center md:text-right">
+                {{ unterzeile }}
+            </div>
+        </div>
+
+        {{/if }}
+
+    </div>
+
+    {{if lead }}
+    <div class="md:w-2/3 mt-8 mx-auto text-center">
+        <p>{{ lead }}</p>
+    </div>
+    {{/if }}
+
+
+    {{ else }}
+    <div class="flex flex-col justify-center items-center">
+
+        <h1 class="heading-xl">{{ title }}</h1>
+
+        {{if unterzeile }}
+
+        <h3 class="relative heading-4 md:w-1/2 mt-4 text-center">
+            {{ unterzeile }}
+        </h3>
+
+        {{/if }}
+        {{if lead }}
+        <div class="md:w-2/3 mt-8 text-center">
+            <p>{{ lead }}</p>
+        </div>
+        {{/if }}
+
+    </div>
+
+    {{/if}}
+</div>

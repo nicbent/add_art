@@ -4,7 +4,7 @@ blueprint: home
 title: Home
 template: home
 updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
-updated_at: 1682139071
+updated_at: 1683533885
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -24,7 +24,7 @@ page_builder:
                 type: text
                 text: 'add art macht die unternehmerische Beschäftigung mit Kunst und deren Förderung in Hamburg erlebbar: Alljährlich im November öffnen Hamburger Unternehmen ihre Türen für Kunst, KünstlerInnen und BesucherInnen. Unsere Ziele: den Austausch zwischen Unternehmen und KünstlerInnen zu fördern sowie Kunst einfach zugänglich zu machen. Davon haben alle etwas: KünstlerInnen, Unternehmen und BesucherInnen.'
         ueberschrift: 'was ist add art?'
-        groesse: xl
+        groesse: lg
         buttons:
           -
             id: lgnfnbp4
@@ -67,7 +67,7 @@ page_builder:
         button_label: 'Mehr Infos'
         button_link: 427b01fb-a8e0-4c28-8475-63b2d54971c7
         hintergrund: bg-transparent
-        bild: icons8-edward-munch--schrei-64.png
+        bild: kuenstler-innen.svg
       -
         id: lgnh84z3
         ueberschrift: 'Für BesucherInnen'
@@ -174,28 +174,6 @@ page_builder:
     button_label: 'mehr über art break'
     type: cta_element
     enabled: true
-slider:
-  -
-    id: lfs1s90r
-    type: image
-  -
-    id: lfs1sa9l
-    type: image
-  -
-    id: lfs1savg
-    type: image
-  -
-    id: lfs3y1ym
-    type: image
-  -
-    id: lfs5x81z
-    type: image
-  -
-    id: lfs5x8lp
-    type: image
-  -
-    id: lfs5x9sg
-    type: image
 naechste_addart: '2023-04-04 16:00:00'
 ueberschrift: Headline
 text:
@@ -205,5 +183,14 @@ text:
       -
         type: text
         text: 'Wortherkunft: abgeleitet vom gemeingerm. Verb ‚berichten‘, ursprünglich ‚in Ordnung bringen, belehren, unterweisen‘; heute: ‚Kunde von etwas geben, mündlich oder schriftlich darlegen‘; auch nichtjournalistisch benutzt für Schriftstücke wie Protokoll, Unfallbericht oder Lebenslauf.'
-hero_bild: _y2a2360-1682076593.jpg
+slider:
+  -
+    id: lhajgxfu
+    image: _f3a7498-1683533560.jpg
+  -
+    id: lhahs8xw
+    image: _f3a7957-1683533563.jpg
+  -
+    id: lhekerud
+    image: _y2a2360-1683533569.jpg
 ---
