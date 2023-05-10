@@ -4,7 +4,7 @@ fields:
     handle: image
     field:
       mode: list
-      container: assets
+      container: images
       restrict: false
       allow_uploads: true
       max_files: 1
@@ -12,6 +12,91 @@ fields:
       localizable: true
       listable: hidden
       display: Image
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      show_filename: true
+  -
+    handle: entry
+    field:
+      max_items: 1
+      mode: default
+      type: entries
+      localizable: true
+      listable: false
+      display: Entry
+  -
+    handle: text_rich
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: true
+      link_noreferrer: false
+      container: files
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      type: bard
+      replicator_preview: false
+      localizable: true
+      listable: hidden
+      display: Text
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      previews: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      antlers: false
+      remove_empty_nodes: trim
+      collapse: false
+      smart_typography: true
+      inline: false
+  -
+    handle: text_basic
+    field:
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: true
+      link_noreferrer: false
+      container: files
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      type: bard
+      replicator_preview: false
+      localizable: true
+      listable: hidden
+      display: Text
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      previews: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      antlers: false
+      remove_empty_nodes: trim
+      collapse: false
+      smart_typography: true
+      inline: false
   -
     handle: text_plain
     field:
@@ -31,32 +116,6 @@ fields:
       default: md
       listable: hidden
       display: Size
-  -
-    handle: entry
-    field:
-      max_items: 1
-      mode: default
-      type: entries
-      localizable: true
-      listable: false
-      display: Entry
-  -
-    handle: groesse
-    field:
-      options:
-        1/4: null
-        1/3: null
-        1/2: null
-        2/3: null
-        3/4: null
-        full: null
-      default: full
-      display: Größe
-      type: button_group
-      icon: button_group
-      listable: hidden
-      instructions_position: above
-      visibility: visible
   -
     handle: spalten
     field:
