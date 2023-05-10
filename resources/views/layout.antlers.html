@@ -10,10 +10,11 @@
     {{ partial:statamic-peak-browser-appearance::snippets/browser_appearance }}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ubuntu:wght@400;700&display=swap"
+        rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 
@@ -25,7 +26,15 @@
     {{ yield:seo_body }}
 
     <div class="relative">
+        {{if slug == 'add-art-fuer-unternehmen' }}
+        <div></div>
+        {{elseif slug == 'add-art-fuer-nachwuchskuenstlerinnen' }}
+        <div></div>
+
+        {{else }}
         {{ partial:layout/header }}
+        {{/if}}
+
 
         {{ if template == "home" }}
         {{ partial:components/hero-home }}

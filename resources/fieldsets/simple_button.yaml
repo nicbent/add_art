@@ -1,0 +1,24 @@
+title: 'Simple Button'
+fields:
+  -
+    handle: button_label
+    field:
+      input_type: text
+      antlers: false
+      display: 'Button Label'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: button_link
+    field:
+      display: 'Button Link'
+      type: link
+      icon: link
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible

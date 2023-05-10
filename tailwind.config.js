@@ -27,7 +27,12 @@ module.exports = {
   ],
   safelist: [
     '-top-[10%]','-top-[20%]','-top-[30%]','-top-[40%]','-top-[50%]',
-    '-left-[25%]','-left-[50%]','-left-[75%]','-left-[100%]'
+    '-left-[25%]','-left-[50%]','-left-[75%]','-left-[100%]',
+    {
+      pattern: /cols-/,
+      variants: ["sm", "md", "lg", "xl", "2xl"],
+    },
+
 
   ]
 }

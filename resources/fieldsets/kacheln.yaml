@@ -64,3 +64,4 @@ fields:
       listable: hidden
       instructions_position: above
       visibility: visible
+      add_row: 'Kachel hinzufügen'

@@ -4,7 +4,7 @@ blueprint: home
 title: Home
 template: home
 updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
-updated_at: 1683533885
+updated_at: 1683694297
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -42,11 +42,19 @@ page_builder:
             button_type: button
         button_label: Infos
         button_link: 4e4896b4-2adf-46fa-9179-0fabe127efda
-        hintergrund: bg-primary
+        hintergrund: bg-transparent
+        inhalt:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'add art macht die unternehmerische Beschäftigung mit Kunst und deren Förderung in Hamburg erlebbar: Alljährlich im November öffnen Hamburger Unternehmen ihre Türen für Kunst, KünstlerInnen und BesucherInnen. Unsere Ziele: den Austausch zwischen Unternehmen und KünstlerInnen zu fördern sowie Kunst einfach zugänglich zu machen. Davon haben alle etwas: KünstlerInnen, Unternehmen und BesucherInnen. '
     type: kacheln
     enabled: true
     spalten: '1'
     ausrichtung: center
+    headline: 'was ist add art?'
   -
     id: lgnh21ou
     spalten: '3'
@@ -68,6 +76,39 @@ page_builder:
         button_link: 427b01fb-a8e0-4c28-8475-63b2d54971c7
         hintergrund: bg-transparent
         bild: kuenstler-innen.svg
+        inhalt:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Für Nachwuchskünstler*innen'
+          -
+            type: set
+            attrs:
+              id: lhh7zqae
+              values:
+                type: bild
+                bild: kuenstler-innen-1683694253.svg
+                breite: 1/4
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'KünstlerInnen der HAW Hamburg können sich in Unternehmen präsentieren, ihre Werke verkaufen und neue Kontakte knüpfen.'
+          -
+            type: set
+            attrs:
+              id: lhh7s8lf
+              values:
+                type: button
+                button_label: 'Mehr Infos'
+                button_link: 'entry::427b01fb-a8e0-4c28-8475-63b2d54971c7'
+          -
+            type: paragraph
       -
         id: lgnh84z3
         ueberschrift: 'Für BesucherInnen'
@@ -78,11 +119,44 @@ page_builder:
             content:
               -
                 type: text
-                text: 'BesucherInnen können Kunst an Orten entdecken, die in der Regel nicht öffentlich zugänglich sind, mit KünstlerInnen ins Gespräch kommen und Kunst kaufen. '
+                text: 'BesucherInnen können Kunst an Orten entdecken, die in der Regel nicht öffentlich zugänglich sind, mit KünstlerInnen ins Gespräch kommen und Kunst kaufen.'
         button_label: 'Mehr Infos'
         button_link: b0449dfd-ed9b-496b-98f5-10059c63e3f2
         hintergrund: bg-transparent
         bild: icons8-paar--mann-frau-64.png
+        inhalt:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Für Besucher*innen'
+          -
+            type: set
+            attrs:
+              id: lhh7yq0n
+              values:
+                type: bild
+                bild: besucher-innen.svg
+                breite: 1/4
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'BesucherInnen können Kunst an Orten entdecken, die in der Regel nicht öffentlich zugänglich sind, mit KünstlerInnen ins Gespräch kommen und Kunst kaufen. '
+          -
+            type: set
+            attrs:
+              id: lhh7pobp
+              values:
+                type: button
+                button_label: 'Mehr Infos'
+                button_link: 'entry::b0449dfd-ed9b-496b-98f5-10059c63e3f2'
+          -
+            type: paragraph
       -
         id: lgnha463
         ueberschrift: 'Für Unternehmen'
@@ -93,11 +167,44 @@ page_builder:
             content:
               -
                 type: text
-                text: 'Unternehmen können Sammlungen oder Nachwuchskunst präsentieren und erhalten dadurch vielfältige Impulse, die sowohl nach innen als auch nach außen wirken. '
+                text: 'Unternehmen können Sammlungen oder Nachwuchskunst präsentieren und erhalten dadurch vielfältige Impulse, die sowohl nach innen als auch nach außen wirken.'
         button_label: 'Mehr Infos'
         button_link: fb1e017d-0d5f-4b08-b299-8038ebfd9418
         hintergrund: bg-transparent
         bild: icons8-unternehmen-64.png
+        inhalt:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Für Unternehmen'
+          -
+            type: set
+            attrs:
+              id: lhh7yq0n
+              values:
+                type: bild
+                bild: unternehmen.svg
+                breite: 1/4
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Unternehmen können Sammlungen oder Nachwuchskunst präsentieren und erhalten dadurch vielfältige Impulse, die sowohl nach innen als auch nach außen wirken. '
+          -
+            type: set
+            attrs:
+              id: lhh7rum9
+              values:
+                type: button
+                button_label: 'Mehr Infos'
+                button_link: 'entry::fb1e017d-0d5f-4b08-b299-8038ebfd9418'
+          -
+            type: paragraph
     type: kacheln
     enabled: true
     shift: false

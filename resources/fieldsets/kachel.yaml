@@ -1,39 +1,6 @@
 title: Kachel
 fields:
   -
-    handle: ueberschrift
-    field:
-      input_type: text
-      antlers: false
-      display: Ueberschrift
-      type: text
-      icon: text
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      width: 50
-  -
-    handle: groesse
-    field: common.groesse
-    config:
-      width: 25
-  -
-    handle: bild
-    field:
-      mode: list
-      container: images
-      restrict: false
-      allow_uploads: true
-      show_filename: false
-      display: Bild
-      type: assets
-      icon: assets
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      width: 33
-      max_files: 1
-  -
     handle: hintergrund
     field: common.hintergrund
     config:
@@ -42,15 +9,18 @@ fields:
         bg-black: Schwarz
         bg-white: Weiß
         bg-transparent: Transparent
-      width: 33
+      width: 25
   -
-    handle: text
+    handle: inhalt
     field:
       collapse: false
       always_show_set_button: false
       previews: true
       smart_typography: false
       buttons:
+        - h2
+        - h3
+        - h4
         - bold
         - italic
       save_html: false
@@ -66,34 +36,25 @@ fields:
       enable_paste_rules: false
       antlers: false
       remove_empty_nodes: false
-      display: Text
+      display: Inhalt
       type: bard
       icon: bard
       listable: hidden
       instructions_position: above
       visibility: visible
-  -
-    handle: button_label
-    field:
-      input_type: text
-      antlers: false
-      display: 'Button Label'
-      type: text
-      icon: text
-      width: 50
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-  -
-    handle: button_link
-    field:
-      mode: default
-      create: false
-      display: 'Button Link'
-      type: entries
-      icon: entries
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      width: 50
-      max_items: 1
+      sets:
+        button:
+          display: Button
+          fields:
+            -
+              import: simple_button
+        zitat:
+          display: Zitat
+          fields:
+            -
+              import: zitat
+        bild:
+          display: Bild
+          fields:
+            -
+              import: bild

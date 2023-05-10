@@ -3,21 +3,30 @@
     {{if headline }}
     <h2 class="heading-lg mb-4">{{headline}}</h2>
     {{/if}}
-    <div class="grid md:grid-cols-{{spalten}} gap-4 {{shift ? "md:mb-16" : ""}}">
+    <div class="grid md:grid-cols-{{spalten}} gap-4 {{shift ? " md:mb-16" : "" }}">
         {{ kachel }}
-        <div class="flex flex-col p-8 items-{{ausrichtung}} {{ hintergrund }} {{ if ausrichtung == "center" }}text-center{{elseif ausrichtung=="end" }}text-right{{ else }}text-left{{ /if }} {{shift ? "md:even:translate-y-16" : ""}}">
-            <h3 class="heading-{{groesse}} mb-4">{{ ueberschrift}}</h3>
-            {{if bild }}
-            <div class="relative mb-4">
-                <img src="{{ bild:url }}" alt="{{ alt }}">
+        <div class="flex flex-col p-8 items-{{ausrichtung}} {{ hintergrund }} {{shift
+            ? "md:even:translate-y-16" : "" }}">
+            {{inhalt}}
+            {{ if type == "text" }}
+            <div class="{{ if ausrichtung == "center"}}text-center{{elseif ausrichtung=="end" }}text-right{{ else }}text-left{{ /if }}">
+                {{ text }}
             </div>
-            {{/if}}
-            <div class="relative">
-                <p>{{ text }}</p>
-            </div>
-            {{if button_link }}
+
+            {{ elseif type == "button" }}
+
             <a href="{{button_link:url}}" class="btn btn-black mt-8">{{button_label}}</a>
+
+            {{ elseif type == "zitat" }}
+            {{ partial:components/zitat }}
+            {{ elseif type == "bild" }}
+            {{ partial:components/bild }}
+
+
+
             {{/if}}
+
+            {{/inhalt}}
 
         </div>
         {{ /kachel }}

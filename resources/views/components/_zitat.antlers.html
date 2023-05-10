@@ -1,0 +1,30 @@
+<div class="relative">
+
+    <div class="flex gap-4">
+        {{if bild }}
+        <div class="relative w-1/4">
+            <div class="ratio-1/1">
+                <img src="{{ bild:url }}" alt="{{ alt }}">
+            </div>
+ 
+        </div>
+        {{/if}}
+
+        <div class="w-3/4">
+            <div class="text-base">{{text}}</div>
+            
+            <span class="text-sm font-bold">– {{author}}</span>
+
+
+        </div>
+
+    </div>
+    
+
+
+
+
+
+
+
+</div>
