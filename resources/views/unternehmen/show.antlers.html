@@ -1,3 +1,4 @@
+
 <div class="max-w-6xl mx-auto">
     <div class="grid md:grid-cols-2 md:gap-x-8">
 
@@ -31,33 +32,53 @@
                     <p class="font-headings">{{ adresse:street }}, {{adresse:postCode}} {{ adresse:city}}</p>
                     <a>{{webadresse}}</a>
                 </div>
-
-                <div class="relative md:text-right mt-6">
-                    <p>{{ beschreibung_unternehmen }}</p>
-                </div>
             </div>
         </div>
 
     </div>
 </div>
 
+<div class="max-w-6xl mx-auto">
+    <h2 class="heading-lg mb-4 text-primary">Unternehmen</h2>
+                        {{ beschreibung_unternehmen }}
+
+</div>
 
 
 <div class="max-w-6xl mx-auto">
     <h2 class="heading-lg mb-4 text-primary">Kunst</h2>
+
+    {{if eigene_sammlung }}
+    <div class="relative md:w-3/4">{{beschreibung_kunst}} </div>
+    <div class="columns-4">
+        {{kunstsammlung}}
+        {{bild}}
+        <div class="flex flex-col break-inside-avoid mb-12">
+            <img src="{{ url }}" alt="{{ alt }}">
+            <span>Simon Nelke</span>
+        </div>
+        {{/bild}}
+        {{/kunstsammlung}}
+    </div>
+
+
+    {{ else }}
+
     {{ ausgestellte_kuenstler }}
     <div class="mb-16">
         <h3 class="heading-sm mb-2">{{title}}</h3>
         <div class="relative md:w-3/4">{{kuenstler_beschreibung}} </div>
-        <div class="grid grid-cols-8 gap-4">
+        <div class="columns-2 md:columns-4">
             {{bildergalerie}}
             {{bild}}
-            <img src="{{ url }}" alt="{{ alt }}">
+            <img src="{{ url }}" alt="{{ alt }}" class="w-full">
             {{/bild}}
             {{/bildergalerie}}
         </div>
     </div>
     {{ /ausgestellte_kuenstler }}
+
+    {{/if}}
 </div>
 
 <div class="max-w-6xl mx-auto">

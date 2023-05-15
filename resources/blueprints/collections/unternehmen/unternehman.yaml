@@ -56,6 +56,86 @@ sections:
           instructions_position: above
           visibility: visible
       -
+        handle: besichtigungszeiten
+        field:
+          fields:
+            -
+              handle: datum
+              field:
+                mode: single
+                time_enabled: false
+                time_seconds_enabled: false
+                full_width: false
+                inline: false
+                columns: 1
+                rows: 1
+                display: Datum
+                type: date
+                icon: date
+                width: 33
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+            -
+              handle: zeit_start
+              field:
+                seconds_enabled: false
+                display: 'Zeit Start'
+                type: time
+                icon: time
+                width: 33
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+            -
+              handle: zeit_ende
+              field:
+                seconds_enabled: false
+                display: 'Zeit Ende'
+                type: time
+                icon: time
+                width: 33
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+          mode: stacked
+          reorderable: true
+          display: Besichtigungszeiten
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: vorschau
+        field:
+          collapse: false
+          always_show_set_button: false
+          previews: true
+          smart_typography: false
+          buttons:
+            - bold
+            - italic
+          save_html: false
+          inline: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: false
+          allow_source: false
+          enable_input_rules: false
+          enable_paste_rules: false
+          antlers: false
+          remove_empty_nodes: false
+          display: Vorschau
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: beschreibung_unternehmen
         field:
           collapse: false
@@ -100,6 +180,16 @@ sections:
           visibility: visible
           instructions: 'Erstes Bild wird in der Listen-Ansicht und Aufmacher verwendet.'
       -
+        handle: eigene_sammlung
+        field:
+          default: false
+          display: 'Eigene Sammlung!'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: ausgestellte_kuenstler
         field:
           mode: default
@@ -109,6 +199,75 @@ sections:
           display: 'Ausgestellte Künstler'
           type: entries
           icon: entries
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: beschreibung_kunst
+        field:
+          collapse: false
+          always_show_set_button: false
+          previews: true
+          smart_typography: false
+          buttons:
+            - bold
+            - italic
+          save_html: false
+          inline: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: false
+          allow_source: false
+          enable_input_rules: false
+          enable_paste_rules: false
+          antlers: false
+          remove_empty_nodes: false
+          display: 'Beschreibung Kunst'
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: kunstsammlung
+        field:
+          fields:
+            -
+              handle: bild
+              field:
+                mode: list
+                container: images
+                restrict: false
+                allow_uploads: true
+                show_filename: false
+                max_files: 1
+                display: Bild
+                type: assets
+                icon: assets
+                width: 33
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+            -
+              handle: bildunterschrift
+              field:
+                input_type: text
+                antlers: false
+                display: Bildunterschrift
+                type: text
+                icon: text
+                width: 66
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+          mode: stacked
+          reorderable: true
+          display: Kunstsammlung
+          type: grid
+          icon: grid
           listable: hidden
           instructions_position: above
           visibility: visible

@@ -10,7 +10,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
-updated_at: 1683692521
+updated_at: 1683789887
 page_builder:
   -
     id: lgkzdai3
@@ -24,6 +24,7 @@ page_builder:
           -
             type: heading
             attrs:
+              class: null
               level: 3
             content:
               -
@@ -41,6 +42,7 @@ page_builder:
               -
                 type: text
                 text: 'Binden Sie Ihre MitarbeiterInnen aktiv ein, nutzen Sie die Ausstellung für spezielle Führungen oder einen Workshop für Ihre MitarbeiterInnen. '
+        typ: standard
       -
         id: lgkze8h5
         ueberschrift: Kundenbindung
@@ -48,9 +50,7 @@ page_builder:
         hintergrund: bg-primary
         inhalt:
           -
-            type: heading
-            attrs:
-              level: 3
+            type: paragraph
             content:
               -
                 type: text
@@ -61,6 +61,7 @@ page_builder:
               -
                 type: text
                 text: 'Kunst schafft einen Anlass, über den Sie mit Ihren Kunden ins Gespräch kommen können – zum Beispiel im Rahmen einer Vernissage oder einer speziellen Führung. Darüber hinaus gibt es weitere Möglichkeiten, etwa eine Edition als Kundengeschenk.'
+        typ: standard
       -
         id: lgkzf3j6
         ueberschrift: 'Vielfältige Impulse'
@@ -70,6 +71,7 @@ page_builder:
           -
             type: heading
             attrs:
+              class: null
               level: 3
             content:
               -
@@ -81,6 +83,7 @@ page_builder:
               -
                 type: text
                 text: 'Kunst schafft Gesprächsanlässe über alle Bereiche hinweg – mit Kunden, Medienvertretern, Kooperationspartnern, Verbänden und anderen Institutionen. Und auch für einen Kreativimpuls oder um über das eigene Wirtschaften zu reflektieren ist Kunst ein guter Ausgangspunkt.'
+        typ: standard
       -
         id: lgkzfqeg
         ueberschrift: 'Kulturelles Engagement'
@@ -90,6 +93,7 @@ page_builder:
           -
             type: heading
             attrs:
+              class: null
               level: 3
             content:
               -
@@ -101,6 +105,7 @@ page_builder:
               -
                 type: text
                 text: 'Mit der Teilnahme an add art zeigen Sie, dass Sie sich aktiv für die Förderung von Kunst engagieren und Kunst einen hohen Stellenwert für Sie hat. Das wiederum kann auch andere Unternehmen inspirieren, sich mit Kunst zu beschäftigen – und stärkt damit den Kulturstandort Hamburg. '
+        typ: standard
     type: kacheln
     enabled: true
     headline: 'Warum mitmachen?'
@@ -131,6 +136,7 @@ page_builder:
           -
             type: heading
             attrs:
+              class: null
               level: 3
             content:
               -
@@ -142,6 +148,7 @@ page_builder:
               -
                 type: text
                 text: 'Wenn Sie über eine eigene Sammlung verfügen oder hin und wieder Ausstellungen in Eigenregie organisieren, lassen Sie gerne auch die interessierte Öffentlichkeit daran teilhaben und zeigen diese während add art.'
+        typ: standard
       -
         id: lhgbgk99
         hintergrund: bg-transparent
@@ -149,6 +156,7 @@ page_builder:
           -
             type: heading
             attrs:
+              class: null
               level: 3
             content:
               -
@@ -160,90 +168,39 @@ page_builder:
               -
                 type: text
                 text: 'Wählen Sie aus einer Vielzahl eingereichter Kunstmappen an der Hochschule für Angewandte Wissenschaften (HAW) Hamburg die für Sie interessante Kunst aus. Unterschiedliche künstlerische Disziplinen sind dabei: Malerei, Zeichnung, Illustration, Objekte, Fotografie oder auch Textildesign. Die KünstlerInnen entwickeln in Abstimmung mit Ihnen ein für Ihre Büroraume geeignetes Ausstellungskonzept. '
+        typ: standard
     type: kacheln
     enabled: true
     shift: false
   -
-    id: lhg2b3cx
-    spalten: '2'
-    ausrichtung: center
-    shift: true
-    headline: 'Stimmen der Unternehmen'
-    kachel:
+    id: lhim624c
+    review:
       -
-        id: lhg9i29a
-        groesse: sm
-        hintergrund: bg-transparent
-        inhalt:
-          -
-            type: set
-            attrs:
-              id: lhgamt2s
-              values:
-                type: zitat
-                text: '„Unsere Arbeit lebt von der Kommunikation. Mit add art können wir Kommunikation anregen, sowohl intern als auch mit Mandanten, und auch den Besuchern eine Freude mit der Ausstellung machen.“'
-                bild: andreas_kirsch_magazin.jpg
-                author: 'Bastian Ruge, RUGE FEHSENFELD'
+        id: lhim6420
+        text: 'Unsere Arbeit lebt von der Kommunikation. Mit add art können wir Kommunikation anregen, sowohl intern als auch mit Mandanten, und auch den Besuchern eine Freude mit der Ausstellung machen.'
+        bild: csm_rf_mag_f10ecc296e.jpg
+        author: 'Bastian Ruge, RUGE FEHSENFELD'
       -
-        id: lhgs64fq
-        hintergrund: bg-transparent
-        inhalt:
-          -
-            type: set
-            attrs:
-              id: lhgs672m
-              values:
-                type: zitat
-                text: '„Bei unserer Agentur steht der Mensch im Mittelpunkt. Fester Bestandteil unserer Unternehmenskultur ist, dass wir uns von Kunst inspirieren lassen und uns darüber austauschen. Deshalb sind wir bei add art von Anfang an dabei und unterstützen das Projekt in vielen Belangen.“'
-                bild: web_michael-schipper.jpg
-                author: 'Michael Schipper, you'
-          -
-            type: paragraph
+        id: lhim6ln5
+        text: 'Bei unserer Agentur steht der Mensch im Mittelpunkt. Fester Bestandteil unserer Unternehmenskultur ist, dass wir uns von Kunst inspirieren lassen und uns darüber austauschen. Deshalb sind wir bei add art von Anfang an dabei und unterstützen das Projekt in vielen Belangen.'
+        bild: web_michael-schipper.jpg
+        author: 'Michael Schipper, you'
       -
-        id: lhgs8gxd
-        hintergrund: bg-transparent
-        inhalt:
-          -
-            type: set
-            attrs:
-              id: lhgs8zka
-              values:
-                type: zitat
-                text: '„Kunst ist schon immer Teil unserer besonderen Erlebniswelt als Hotel. Wir möchten Kunst ohne Schwellenangst und Hürden für unsere Besucher erfahrbar machen, und gleichzeitig auch unsere Mitarbeiter inspirieren. Das machen wir mit unserer Teilnahme bei add art deutlich.“'
-                bild: csm_christa_block_farbe_web_c8032674dc.jpg
-                author: 'Christa Block, Grand Elysée Hamburg'
-          -
-            type: paragraph
+        id: lhim751q
+        text: 'Kunst ist schon immer Teil unserer besonderen Erlebniswelt als Hotel. Wir möchten Kunst ohne Schwellenangst und Hürden für unsere Besucher erfahrbar machen, und gleichzeitig auch unsere Mitarbeiter inspirieren. Das machen wir mit unserer Teilnahme bei add art deutlich.'
+        bild: csm_christa_block_farbe_web_c8032674dc.jpg
+        author: 'Christa Block, Grand Elysée Hamburg'
       -
-        id: lhh6pwpf
-        hintergrund: bg-transparent
-        inhalt:
-          -
-            type: set
-            attrs:
-              id: lhh6q1y1
-              values:
-                type: zitat
-                text: '„Mit unserer Teilnahme bei add art wollen wir in erster Linie Verbindungen zwischen Künstlern und Besuchern schaffen. Doch auch für uns als Beratungsinstitut geht es immer wieder darum, hinter die Kulissen eines Beratungsfalles zu schauen. Kunst schafft Offenheit für einen Perspektivwechsel.“'
-                bild: csm_stiedemann_mag_e49336d07f.jpg
-                author: 'Susanne Tiedemann, Fürstenberg Institut'
-          -
-            type: paragraph
+        id: lhim7njr
+        text: 'Mit unserer Teilnahme bei add art wollen wir in erster Linie Verbindungen zwischen Künstlern und Besuchern schaffen. Doch auch für uns als Beratungsinstitut geht es immer wieder darum, hinter die Kulissen eines Beratungsfalles zu schauen. Kunst schafft Offenheit für einen Perspektivwechsel.'
+        bild: csm_stiedemann_mag_e49336d07f.jpg
+        author: 'Susanne Tiedemann, Fürstenberg Institut'
       -
-        id: lhh6y1ye
-        hintergrund: bg-transparent
-        inhalt:
-          -
-            type: set
-            attrs:
-              id: lhh6yawf
-              values:
-                type: zitat
-                text: '„Wir sind seit vielen Jahren bei add art dabei, und möchten in erster Linie unseren Mitarbeitern neue Anregungen bieten und Interesse an Kunst und Künstlern wecken. Wir sehen im Zeitverlauf, dass sich jedes Jahr mehr Mitarbeiter für die Ausstellungen interessieren. So konnten wir einen ganz neuen Raum für Begegnungen schaffen.“'
-                bild: csm_rf_mag_f10ecc296e.jpg
-                author: 'Volker Scheel, K.D. Feddersen Holding'
-          -
-            type: paragraph
-    type: kacheln
+        id: lhim8k85
+        text: 'Wir sind seit vielen Jahren bei add art dabei, und möchten in erster Linie unseren Mitarbeitern neue Anregungen bieten und Interesse an Kunst und Künstlern wecken. Wir sehen im Zeitverlauf, dass sich jedes Jahr mehr Mitarbeiter für die Ausstellungen interessieren. So konnten wir einen ganz neuen Raum für Begegnungen schaffen.'
+        bild: csm_volker_scheel_magazin_9c1eca4669.jpg
+        author: 'Volker Scheel, K.D. Feddersen Holding'
+    type: reviews
     enabled: true
+    ueberschrift: 'Stimmen der Unternehmen'
 ---

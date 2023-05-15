@@ -293,3 +293,25 @@ div[class*="ratio-"] img {
   height: 100%;
   object-fit: cover;
 }
+
+.frame-header {
+
+  @apply flex gap-4 text-xl -mt-8 -ml-8
+}
+
+.frame-header::before {
+
+  content: '';
+  display: flex;
+  background: #000;
+  width: 20px;
+  height: 10px;
+}
+
+.frame-header::after {
+  content: '';
+  display: flex;
+  background: #000;
+  flex-grow: 1;
+  height: 10px;
+}

@@ -4,3 +4,4 @@ data:
     start: '2023-11-17'
     end: '2023-11-20'
   content_from_year: '2022'
+  testdatum: '2023-05-14'

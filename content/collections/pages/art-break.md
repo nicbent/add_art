@@ -8,8 +8,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
-updated_at: 1681289920
-hero_image: s.allerding_g-1681289595.jpg
+updated_at: 1683792132
 unterzeile: 'Gemeinsam Neues entdecken'
 lead: 'Eine handgefertigte, kleinteilige, künstlerische Übergieß-Version des klassischen Lorem-Ipsum-Generators Hipster Ipsum verleiht Ihren Mocks das gewisse Etwas.'
 ---

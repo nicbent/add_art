@@ -4,10 +4,9 @@ blueprint: unternehman
 title: sitegeist
 adresse_t: 'Poßmoorweg 2, 22301 Hamburg'
 updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
-updated_at: 1681808946
+updated_at: 1683923889
 logo: sitegeist_logo.png
-teilnahmejahr:
-  - '2022'
+teilnahmejahr: '2022'
 bilder_unternehmen:
   - sitegeist_1.jpg
   - sitegeist_2.jpg
@@ -33,4 +32,20 @@ adresse:
   latitude: '53.5855491'
   longitude: '10.0069744'
   country: DE
+beschreibung_kunst:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Mit über 200 ausgestellten Exponaten handelt es sich bei der Sammlung '
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: '„streetgeist – the urban streetart collection“'
+      -
+        type: text
+        text: ' um eine der größten Streetart-Sammlungen Norddeutschlands. Viele der namhaften Größen des Genres sind hier vertreten: Shepard Fairey (OBEY), Banksy, Mr. Brainwash, Invader, Martin Whatson, PEJAC, Sandra Chevrier, d*face, 1UP-Crew, aquagringo.'
 ---

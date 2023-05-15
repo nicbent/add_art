@@ -11,6 +11,21 @@ fields:
         bg-transparent: Transparent
       width: 25
   -
+    handle: typ
+    field:
+      options:
+        standard: null
+        zitat: null
+        rahmen: null
+      default: standard
+      display: Typ
+      type: button_group
+      icon: button_group
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
     handle: inhalt
     field:
       collapse: false
@@ -18,11 +33,11 @@ fields:
       previews: true
       smart_typography: false
       buttons:
-        - h2
         - h3
         - h4
         - bold
         - italic
+        - bts_attributes
       save_html: false
       inline: false
       toolbar_mode: fixed

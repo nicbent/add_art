@@ -20,6 +20,11 @@ fields:
           fields:
             -
               import: cta_element
+        reviews:
+          display: Reviews
+          fields:
+            -
+              import: reviews
       instructions_position: above
       visibility: visible
       previews: true

@@ -1,0 +1,27 @@
+title: Reviews
+fields:
+  -
+    handle: ueberschrift
+    field:
+      input_type: text
+      antlers: false
+      display: Überschrift
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: review
+    field:
+      fields:
+        -
+          import: zitat
+      mode: stacked
+      reorderable: true
+      display: Review
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible

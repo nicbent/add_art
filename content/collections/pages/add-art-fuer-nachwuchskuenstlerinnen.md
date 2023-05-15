@@ -10,7 +10,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
-updated_at: 1683693282
+updated_at: 1683790330
 page_builder:
   -
     id: lgl0ol43
@@ -43,6 +43,7 @@ page_builder:
               -
                 type: text
                 text: 'Als NachwuchskünstlerIn sammelst Du Erfahrungen in der Ausstellungsorganisation. Dazu gehören die Entwicklung eines Ausstellungskonzeptes für die vorhandenen Räume, Absprache mit dem Unternehmen, Transport, Hängung, Gestaltung von Materialien und Preislisten.'
+        typ: standard
       -
         id: lgl0owsv
         ueberschrift: 'Netzwerk erweitern'
@@ -70,6 +71,7 @@ page_builder:
               -
                 type: text
                 text: 'Du sammelst Erfahrungen im Umgang mit unterschiedlichen Menschen und deren Interessen, wie den Verantwortlichen im Unternehmen und deren MitarbeiterInnen, mit den BesucherInnen, mit VertreterInnen von Kunstinstitutionen, mit der Presse – und erweiterst nebenbei etwas sehr Wichtiges für die Zukunft als KünstlerIn: Dein Netzwerk.'
+        typ: standard
       -
         id: lgl0oxha
         ueberschrift: 'Eigenpräsentation stärken'
@@ -97,6 +99,7 @@ page_builder:
               -
                 type: text
                 text: 'Ein wesentlicher Teil von add art sind die Führungen für die BesucherInnen durch die NachwuchskünstlerInnen. Bei dieser Gelegenheit wirst Du Deine Werke vorstellen und über Deine Arbeit und Deine Interessen sprechen. Hier kannst Du Deine Eigenpräsentation und Darstellung als KünstlerIn stärken. '
+        typ: standard
       -
         id: lgl0oxu6
         ueberschrift: 'Kunst verkaufen'
@@ -113,6 +116,7 @@ page_builder:
           -
             type: heading
             attrs:
+              class: null
               level: 3
             content:
               -
@@ -124,136 +128,37 @@ page_builder:
               -
                 type: text
                 text: 'add art ist eine gute Möglichkeit, Deine Werke zu verkaufen. Das Gute daran: Der Erlös geht zu 100 Prozent an Dich. Mit Kaufinteressenten kannst Du ganz unkompliziert ins Gespräch kommen. Wie der „richtige“ Preis für Deine Werke aussieht, stellt dabei eine wichtige Frage in der Vorbereitung dar. '
+        typ: standard
     type: kacheln
     enabled: true
     spalten: '2'
     ausrichtung: start
     shift: true
   -
-    id: lhg2wgug
-    spalten: '2'
-    ausrichtung: center
-    shift: true
-    headline: 'Stimmen der Künstler*innen'
-    kachel:
+    id: lhit11l1
+    ueberschrift: 'Stimmen der Künstler*innen'
+    review:
       -
-        id: lhg2wv2u
-        ueberschrift: 'Barbara Eßer'
-        groesse: sm
-        hintergrund: bg-transparent
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '„Für mich war die Teilnahme an add art eine wirklich gute Erfahrung, nette und interessierte Besucher zu treffen und Führungen zu gestalten. Die eigene Arbeit auf diese Weise öffentlich zu präsentieren, liegt definitiv außerhalb des ‚normalen‘ Uni-Alltags und eröffnet neue Perspektiven.“'
-        inhalt:
-          -
-            type: set
-            attrs:
-              id: lhh76vc7
-              values:
-                type: zitat
-                text: '„Für mich war die Teilnahme an add art eine wirklich gute Erfahrung, nette und interessierte Besucher zu treffen und Führungen zu gestalten. Die eigene Arbeit auf diese Weise öffentlich zu präsentieren, liegt definitiv außerhalb des ‚normalen‘ Uni-Alltags und eröffnet neue Perspektiven.“'
-                bild: barbara_esser.jpg
-                author: 'Barbara Eßer'
-          -
-            type: paragraph
+        id: lhit1ous
+        text: 'Für mich war die Teilnahme an add art eine wirklich gute Erfahrung, nette und interessierte Besucher zu treffen und Führungen zu gestalten. Die eigene Arbeit auf diese Weise öffentlich zu präsentieren, liegt definitiv außerhalb des ‚normalen‘ Uni-Alltags und eröffnet neue Perspektiven.'
+        bild: barbara_esser.jpg
+        author: 'Barbara Eßer'
       -
-        id: lhg2xioe
-        ueberschrift: 'Sophie Allerding'
-        groesse: sm
-        hintergrund: bg-transparent
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '„Auch wenn ein Unternehmen nicht die Vorteile einer Galerie in Form eines etablierten Interessentenkreises bietet, so trifft man bei add art wiederum auf Menschen, die vielleicht sonst nicht zu dieser Ausstellung in die Galerie gegangen wären. Dieser Ausstellungsort ermöglicht neue Begegnungen, was ich sehr wichtig finde. Kunst soll nicht in einer Blase bleiben.“'
-        inhalt:
-          -
-            type: set
-            attrs:
-              id: lhh789g4
-              values:
-                type: zitat
-                text: '„Auch wenn ein Unternehmen nicht die Vorteile einer Galerie in Form eines etablierten Interessentenkreises bietet, so trifft man bei add art wiederum auf Menschen, die vielleicht sonst nicht zu dieser Ausstellung in die Galerie gegangen wären. Dieser Ausstellungsort ermöglicht neue Begegnungen, was ich sehr wichtig finde. Kunst soll nicht in einer Blase bleiben.“'
-                author: 'Sophie Allerding'
-          -
-            type: paragraph
+        id: lhit2nf8
+        text: 'Auch wenn ein Unternehmen nicht die Vorteile einer Galerie in Form eines etablierten Interessentenkreises bietet, so trifft man bei add art wiederum auf Menschen, die vielleicht sonst nicht zu dieser Ausstellung in die Galerie gegangen wären. Dieser Ausstellungsort ermöglicht neue Begegnungen, was ich sehr wichtig finde. Kunst soll nicht in einer Blase bleiben.'
+        author: 'Sophie Allerding'
       -
-        id: lhg2yemn
-        ueberschrift: 'Andrea Ziegler'
-        groesse: sm
-        hintergrund: bg-transparent
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '„Ich habe sehr viel Feedback bekommen, neue Kontakte beispielsweise zu Kuratorinnen knüpfen können. Neben dem Ankauf durch das ausstellende Unternehmen habe ich zudem noch zwei weitere größere Werke verkaufen können.“'
-        inhalt:
-          -
-            type: set
-            attrs:
-              id: lhh7a64h
-              values:
-                type: zitat
-                text: '„Ich habe sehr viel Feedback bekommen, neue Kontakte beispielsweise zu Kuratorinnen knüpfen können. Neben dem Ankauf durch das ausstellende Unternehmen habe ich zudem noch zwei weitere größere Werke verkaufen können.“'
-                bild: stimme-ziegler_y2a7689.jpg
-                author: 'Andrea Ziegler'
-          -
-            type: paragraph
+        id: lhit3m02
+        text: 'Ich habe sehr viel Feedback bekommen, neue Kontakte beispielsweise zu Kuratorinnen knüpfen können. Neben dem Ankauf durch das ausstellende Unternehmen habe ich zudem noch zwei weitere größere Werke verkaufen können.'
+        author: 'Andrea Ziegler'
       -
-        id: lhg2ymfy
-        ueberschrift: 'Marlen Schulz'
-        groesse: sm
-        hintergrund: bg-transparent
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '„Das Sprechen vor einer größeren Gruppe ist eine sehr hilfreiche Übung. Und auch in der Vorbereitung der Führungen ist es gut, mal auf seine Arbeiten zu schauen und zu sehen wohin ging meine Reise. Und vielleicht auch Gründe dafür zu finden, warum es der Weg war.“'
-        inhalt:
-          -
-            type: set
-            attrs:
-              id: lhh7epvt
-              values:
-                type: zitat
-                text: '„Das Sprechen vor einer größeren Gruppe ist eine sehr hilfreiche Übung. Und auch in der Vorbereitung der Führungen ist es gut, mal auf seine Arbeiten zu schauen und zu sehen wohin ging meine Reise. Und vielleicht auch Gründe dafür zu finden, warum es der Weg war.“'
-                author: 'Marlen Schulz'
-          -
-            type: paragraph
+        id: lhit8dql
+        text: 'Das Sprechen vor einer größeren Gruppe ist eine sehr hilfreiche Übung. Und auch in der Vorbereitung der Führungen ist es gut, mal auf seine Arbeiten zu schauen und zu sehen wohin ging meine Reise. Und vielleicht auch Gründe dafür zu finden, warum es der Weg war.'
+        author: 'Marlen Schulz'
       -
-        id: lhg2z754
-        ueberschrift: 'Claudia Mächler'
-        groesse: sm
-        hintergrund: bg-transparent
-        text:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: '„Das Ausstellungswochenende war unglaublich lehrreich. Ich habe Formulierungen erprobt, meine eigenen Arbeiten durch die Gespräche mit Besuchern durch ihre Augen kennengelernt. Aber auch die Vorbereitung hat mich schon weitergebracht, sich für eine Ausstellung zu strukturieren, das Überlegen, wie die Bilder sinnvoll hängen können, die Katalogerstellung und Preislisten schreiben.“'
-        inhalt:
-          -
-            type: set
-            attrs:
-              id: lhh7gbgp
-              values:
-                type: zitat
-                text: '„Das Ausstellungswochenende war unglaublich lehrreich. Ich habe Formulierungen erprobt, meine eigenen Arbeiten durch die Gespräche mit Besuchern durch ihre Augen kennengelernt. Aber auch die Vorbereitung hat mich schon weitergebracht, sich für eine Ausstellung zu strukturieren, das Überlegen, wie die Bilder sinnvoll hängen können, die Katalogerstellung und Preislisten schreiben.“'
-                bild: stimme-machler_f3a1947.jpg
-                author: 'Claudia Mächler'
-          -
-            type: paragraph
-    type: kacheln
+        id: lhit8n4i
+        text: 'Das Ausstellungswochenende war unglaublich lehrreich. Ich habe Formulierungen erprobt, meine eigenen Arbeiten durch die Gespräche mit Besuchern durch ihre Augen kennengelernt. Aber auch die Vorbereitung hat mich schon weitergebracht, sich für eine Ausstellung zu strukturieren, das Überlegen, wie die Bilder sinnvoll hängen können, die Katalogerstellung und Preislisten schreiben.'
+        author: 'Claudia Mächler'
+    type: reviews
     enabled: true
 ---

@@ -35,3 +35,19 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+      -
+        handle: testdatum
+        field:
+          mode: single
+          time_enabled: false
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: testdatum
+          type: date
+          icon: date
+          listable: hidden
+          instructions_position: above
+          visibility: visible
