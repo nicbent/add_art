@@ -21,7 +21,11 @@
         "studio1902/statamic-peak-browser-appearance": "^1.0",
         "studio1902/statamic-peak-commands": "^1.0",
         "studio1902/statamic-peak-seo": "^1.0",
-        "studio1902/statamic-peak-tools": "^2.0"
+        "studio1902/statamic-peak-tools": "^2.0",
+        "ext-bcmath": "*",
+        "ext-exif": "*",
+        "ext-gd": "*",
+        "ext-mbstring": "*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
