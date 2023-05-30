@@ -68,30 +68,42 @@ font-size: clamp(1rem, 0.9519230769230769rem + 0.2403846153846154vw, 1.125rem);
 .heading-xl {
   font-size: 3rem;
   font-size: clamp(3rem, 2.4rem + 3vw, 6rem);
-  @apply leading-tight lowercase
+  @apply leading-tight 
 
 }
 
 .heading-lg {
   font-size: 2rem;
   font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
-  @apply leading-tight lowercase
+  @apply leading-tight 
 
 }
 
 .heading-md {
   font-size: 1.5rem;
   font-size: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
-  @apply leading-tight lowercase
+  @apply leading-tight 
 
 }
 
 .heading-sm {
   font-size: 1rem;
   font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
-  @apply leading-tight lowercase
-
+  @apply leading-tight 
 }
+
+.heading-xs {
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.7019230769230769rem + 0.2403846153846154vw, 0.875rem);
+  @apply leading-tight 
+}
+
+.text-link {
+  @apply relative pb-1 font-headings text-primary
+  before:h-0.5 before:absolute before:bottom-0 before:w-full before:bg-primary before:scale-x-0 before:transition-transform
+  hover:before:scale-x-100
+}
+
 
 
 
@@ -112,6 +124,16 @@ font-size: clamp(1rem, 0.9519230769230769rem + 0.2403846153846154vw, 1.125rem);
 .is-open .hamburger .hamburger-btn>span {
   @apply origin-center opacity-0 first:opacity-100 first:-rotate-45 first:translate-y-0 last:opacity-100 last:translate-y-0 last:rotate-45 bg-black;
 }
+
+
+/* ❌ Close ❌ */
+
+.close-btn {
+  @apply relative w-6 h-6 
+  before:absolute before:top-0 before:h-full before:w-0.5 before:bg-black before:-rotate-45
+  after:absolute after:top-0 after:h-full after:w-0.5 after:bg-black after:rotate-45;
+}
+
 
 /* End */
 
@@ -294,24 +316,34 @@ div[class*="ratio-"] img {
   object-fit: cover;
 }
 
-.frame-header {
-
-  @apply flex gap-4 text-xl -mt-8 -ml-8
+.frame {
+  @apply mt-4 border-b-2
 }
 
-.frame-header::before {
-
-  content: '';
-  display: flex;
-  background: #000;
-  width: 20px;
-  height: 10px;
+.frame-primary {
+  @apply border-primary
+}
+.frame-head {
+  @apply flex gap-2 
 }
 
-.frame-header::after {
-  content: '';
-  display: flex;
-  background: #000;
-  flex-grow: 1;
-  height: 10px;
+.frame-primary>.frame-head>span {
+  @apply bg-primary
 }
+
+.frame-sm {
+  @apply border-x-2 border-b-2
+  }
+  .frame-sm>.frame-head>span {
+    @apply w-2 h-[2px]
+  }
+
+.frame-md {
+@apply border-x-4 border-b-4
+}
+.frame-md>.frame-head>span {
+  @apply w-4 h-[4px] 
+}
+
+
+

@@ -1,67 +1,122 @@
-<div class="max-w-6xl mx-auto">
-    <section class="flex flex-col items-center justify-center">
-        <h1 class="heading-xl">Unternehmen und <br> Kunst {{ add_art_settings:content_from_year:title }}</h1>
-        <div class="flex gap-8">
-            <div class="md:columns-2 gap-16">
-                {{ collection:unternehmen taxonomy:teilnahmejahr="{{ add_art_settings:content_from_year:title }}" }}
+    <section class="max-w-6xl mx-auto flex gap-16">
+        <h1 class="heading-xl">Unternehmen <span class="heading-lg block">und Kunst  {{ add_art_settings:content_from_year:title }}</span></h1>
+        <div class="flex gap-16">
+            <div class="md:columns-2 mt-4">
+                {{ collection:unternehmen date:contains="{{ add_art_settings:content_from_year:title }}" sort="title" }}
                 <a class="block text-lg font-headings hover:underline" href="#{{title}}">{{ title }}</a>
                 {{ /collection:unternehmen }}
             </div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto flex flex-col">
-        {{ collection:unternehmen taxonomy:teilnahmejahr="{{ add_art_settings:content_from_year:title }}" }}
+    <section class="max-w-6xl mx-auto flex flex-col gap-16 mt-16 md:mt-32">
+        {{ collection:unternehmen date:contains="{{ add_art_settings:content_from_year:title }}" sort="random" }}
 
-        <div class="grid md:grid-cols-2 md:gap-x-8 md:even:text-right md:even:self-end group w-3/4 mt-16"
-            id="{{ title }}">
+        <div class="flex flex-col items-center md:flex-row md:even:flex-row-reverse md:gap-24 group" id="{{title}}" >
+
+            <div class="w-5/6 md:w-1/3 md:group-odd:ml-40 md:group-even:mr-40 group-even:self-end relative flex flex-col md:flex-row row-span-2 border-b-[6px] border-primary">
+
+                <!-- logo -->
+                <div class="absolute flex gap-4 w-full">
+                    <span class="w-4 h-1.5 bg-primary"></span>
+                    <div class="w-24 max-h-12 -translate-y-1/2">
+                        <img class="w-full h-full object-contain" src="{{ logo:url }}" alt="{{ alt }}">
+                    </div>
+                    <span class="grow h-1.5 bg-primary"></span>
+                </div>
+                <!-- /logo -->
 
 
-            <div
-                class="flex items-end z-10 md:group-even:justify-end md:group-odd:col-start-2 md:group-odd:row-start-1">
-                <h3
-                    class="heading-lg text-primary -mb-4 md:mb-2 md:group-even:translate-x-16 md:group-odd:-translate-x-16">
-                    {{ title }}</h3>
+                <!-- title -->
+                <div class="absolute flex flex-col z-10 h-full w-1/2 group-even:right-0 group-even:items-end">
+                    <span class="h-14 w-1.5 bg-primary"></span>
+                    <h3 class="heading-md text-primary md:-translate-x-1/2 md:group-even:translate-x-1/2 mb-0 md:text-center">{{ title }}</h3>
+                    <span class="grow w-1.5 bg-primary"></span>
+                </div>
+                <!-- /title -->
 
-            </div>
-
-            <div class="relative flex flex-col row-span-2 ">
-                <!-- -->
-                <div class="relative w-4/5 
-                group-odd:self-end 
-                group-even:self-start">
+    
+                <!-- bild unternehmen -->
+                <div class="relative w-full p-6">
                     <div class="ratio-4/5">
-                        {{bilder_unternehmen:0 }}
-                        <img src="{{ url }}" alt="{{ alt }}">
-                        {{/bilder_unternehmen:0}}
+                        {{ partial:components/picture :image="bilder_unternehmen:0" cover="true" lazy="true"
+                        sizes="(min-width: 768px) 33vw, 90vw" }}
                     </div>
                 </div>
-                <div class="relative w-5/12 group-odd:self-start group-even:self-end">
-                    {{ ausgestellte_kuenstler }}
-                    {{
-                    top = '-top-['+index * 10+'%]'
-                    left = '-left-['+index * 25+'%]'
-                    }}
-                    {{bildergalerie:0}}
-                    {{bild}}
-                    <img src="{{ url }}" alt="{{ alt }}"
-                        class="hover:z-30 {{first ? 'relative' : 'absolute {{top}} {{left}}'}}">
-                    {{/bild}}
-                    {{/bildergalerie:0}}
-                    {{ /ausgestellte_kuenstler }}
+                <!-- /bild unternehmen -->
+    
+                <!-- kunst -->
+                {{if eigene_sammlung OR ausgestellte_kuenstler }}
+                <div class="absolute h-full w-full flex flex-col items-end group-even:items-start justify-end gap-4">
+                    <span class="grow w-1.5 bg-primary"></span>
+    
+                    <div class="relative flex flex-col items-center {{ausgestellte_kuenstler ? 'gap-2': 'gap-0'}} translate-x-1/2 group-even:-translate-x-1/2 border-2 border-primary p-4">
+    
+                        {{shadow = 'shadow-[0px_8px_4px_-4px_rgba(0,0,0,0.8)]'}}
+    
+                        {{if eigene_sammlung }}
+                        <!-- kunstsammlung -->
+                        {{kunstsammlung| limit(5) | shuffle }}
+                        {{opacity = 'opacity-['+(1-(+'0.'+index))+']'}}
+                        {{scale = 'pb-['+index+'px] md:pb-0 md:pl-['+index+'px]'}}
+    
+    
+                        {{if index === 0}}
+                        {{ partial:components/picture :image="bild" class="w-14 h-auto {{shadow}} blur-[0.3px]"
+                        cover="false" lazy="true" sizes="(min-width: 768px) 33vw,90vw" }}
+                        {{else}}
+    
+                        <div class="h-8 w-full -z-[{{index}}] {{shadow}} bg-white">
+                            {{ partial:components/picture :image="bild" class="{{opacity}} object-right md:object-bottom"
+                            cover="true" lazy="true" sizes="(min-width: 768px) 33vw,90vw" }}
+                        </div>
+                        {{/if}}
+    
+                        {{/kunstsammlung}}
+                        <!-- /kunstsammlung -->
+                        {{ else }}
+    
+                        <!-- nachwuchskunst -->
+                        {{ ausgestellte_kuenstler }}
+                        {{bildergalerie:0 }}
+                        {{ partial:components/picture :image="bild" class="w-12 md:w-14 lg:w-16 h-auto" cover="false" lazy="true"
+                        sizes="(min-width: 768px) 33vw,90vw" }}
+                        {{/bildergalerie:0}}
+                        {{ /ausgestellte_kuenstler }}
+                        <!-- /nachwuchskunst -->
+                        {{/if}}
+    
+    
+                        <!-- round label -->
+                        <div class="absolute top-0 group-odd:left-0 group-even:right-0 -translate-y-1/2 group-odd:-translate-x-1/2 group-even:translate-x-1/2">
+                            <div class="flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-inner">
+                                <span class="-rotate-12 group-even:rotate-12 text-[8px] text-center leading-none uppercase font-bold">
+                                    {{eigene_sammlung ? 'kunst <br /> samm <br /> lung' : 'nach <br /> wuchs<br />kunst'}}
+                                </span>
+                            </div>
+                 
+                        </div>
+                        <!-- /round label -->
+    
+                    </div>
+                    <span class="h-2 w-1.5 bg-primary"></span>
+    
                 </div>
-                <!-- -->
+                {{/if}}
+                <!-- /kunst -->
+           
             </div>
-
-            <div class="flex flex-col items-center md:group-odd:items-start md:group-even:items-end">
-                <div class="relative">
-                    {{ vorschau }}
+    
+            <div class="md:w-1/3 text-center md:group-odd:text-left md:group-even:text-right">
+                <div class="flex flex-col gap-4">
+                    <p>{{ vorschau }}</p>
+            
+                    <a href="{{url}}" class="btn btn-primary md:group-odd:self-start md:group-even:self-end">Mehr Infos</a>
                 </div>
-                <a href="{{url}}" class="btn btn-primary mt-8">mehr infos</a>
-
+     
             </div>
+    
         </div>
 
         {{ /collection:unternehmen }}
     </section>
-</div>

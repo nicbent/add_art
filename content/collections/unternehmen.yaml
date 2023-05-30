@@ -1,12 +1,10 @@
 title: Unternehmen
 template: unternehmen/show
 layout: layout
-mount: 5a424187-46ea-4126-98c1-d503debdd4f3
-taxonomies:
-  - teilnahmejahr
 revisions: false
-route: '/{mount}/{slug}'
-sort_dir: asc
+route: '/{year}/{slug}'
+date: true
+sort_dir: desc
 date_behavior:
   past: public
   future: private
@@ -14,3 +12,4 @@ preview_targets:
   -
     label: Entry
     url: '{permalink}'
+    refresh: true

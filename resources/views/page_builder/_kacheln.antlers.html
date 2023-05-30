@@ -5,26 +5,12 @@
     {{/if}}
     <div class="grid md:grid-cols-{{spalten}} gap-4 {{shift ? " md:mb-16" : "" }}">
         {{ kachel }}
-        <div class="flex flex-col p-8 items-{{ausrichtung}} {{ hintergrund }} {{shift
-            ? "md:even:translate-y-16" : "" }}">
+        <div class="flex flex-col p-8 items-{{ausrichtung}} {{ hintergrund }} {{shift ? "md:even:translate-y-16" : "" }}">
             {{inhalt}}
-            {{ if type == "text" }}
+    
             <div class="{{ if ausrichtung == "center"}}text-center{{elseif ausrichtung=="end" }}text-right{{ else }}text-left{{ /if }}">
                 {{ text }}
             </div>
-
-            {{ elseif type == "button" }}
-
-            <a href="{{button_link:url}}" class="btn btn-black mt-8">{{button_label}}</a>
-
-            {{ elseif type == "zitat" }}
-            {{ partial:components/zitat }}
-            {{ elseif type == "bild" }}
-            {{ partial:components/bild }}
-
-
-
-            {{/if}}
 
             {{/inhalt}}
 

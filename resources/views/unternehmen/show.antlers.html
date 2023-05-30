@@ -1,87 +1,241 @@
+<!-- section Hero -->
 
-<div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 md:gap-x-8">
+<section class="max-w-6xl mx-auto pt-12">
+    <div class="flex flex-col md:flex-row md:items-center gap-8 md:gap-32">
 
+        <div class="w-5/6 md:w-3/6 md:ml-40 relative flex flex-col md:flex-row row-span-2 border-b-[6px] border-primary">
+            <div class="absolute flex gap-4 w-full">
+                <span class="w-4 h-1.5 bg-primary"></span>
+                <div class="w-24 max-h-12 -translate-y-1/2">
+                    <img class="w-full h-full object-contain" src="{{ logo:url }}" alt="{{ alt }}">
+                </div>
+                <span class="grow h-1.5 bg-primary"></span>
 
-        <div class="flex -mb-8 md:mb-0 md:items-end md:justify-end md:text-right md:translate-x-16 z-10">
-            <h1 class="heading-xl text-primary">{{ title }}</h1>
-        </div>
+            </div>
 
-        <div class="relative flex flex-col row-span-2 ">
-            <div class="relative w-4/5 pb-8">
+            <div class="absolute flex flex-col z-10 h-full w-1/2">
+                <span class="h-14 w-1.5 bg-primary"></span>
+                <h1 class="heading-xl text-primary md:-translate-x-1/2 mb-0 md:text-center">{{ title }}</h1>
+                <span class="grow w-1.5 bg-primary"></span>
+            </div>
+
+            <!-- bild unternehmen -->
+            <div class="relative w-full p-8">
                 <div class="ratio-4/5">
-                    {{bilder_unternehmen:0 }}
-                    <img src="{{ url }}" alt="{{ alt }}">
-                    {{/bilder_unternehmen:0}}
+                    {{ partial:components/picture :image="bilder_unternehmen:0" cover="true" lazy="true" sizes="(min-width: 768px) 33vw, 90vw" }}
                 </div>
             </div>
-            {{ ausgestellte_kuenstler }}
-            {{bildergalerie:0}}
-            <div class="absolute w-5/12 {{first ? 'bottom-0 right-0' : 'bottom-0 left-0'}}">
-                <img src="{{ bild:url }}" alt="{{ alt }}" class="hover:z-30">
-            </div>
+            <!-- / -->
 
-            {{/bildergalerie:0}}
-            {{ /ausgestellte_kuenstler }}
+            {{if eigene_sammlung OR ausgestellte_kuenstler }}
+            <div class="absolute h-full w-full flex flex-col items-end justify-end gap-4">
+                <span class="grow w-1.5 bg-primary"></span>
+
+                <div
+                    class="relative flex flex-col items-center {{ausgestellte_kuenstler ? 'gap-2': 'gap-0'}} translate-x-1/2 border-2 border-primary p-4">
+
+                    {{shadow = 'shadow-[0px_8px_4px_-4px_rgba(0,0,0,0.8)]'}}
+
+                    {{if eigene_sammlung }}
+                    <!-- kunstsammlung -->
+                    {{kunstsammlung| limit(5) | shuffle }}
+                    {{opacity = 'opacity-['+(1-(+'0.'+index))+']'}}
+                    {{scale = 'pb-['+index+'px] md:pb-0 md:pl-['+index+'px]'}}
+
+
+                    {{if index === 0}}
+                    {{ partial:components/picture :image="bild" class="w-24 h-auto {{shadow}} blur-[0.3px]"
+                    cover="false" lazy="true" sizes="(min-width: 768px) 33vw,90vw" }}
+                    {{else}}
+
+                    <div class="h-8 w-full -z-[{{index}}] {{shadow}} bg-white">
+                        {{ partial:components/picture :image="bild" class="{{opacity}} object-right md:object-bottom"
+                        cover="true" lazy="true" sizes="(min-width: 768px) 33vw,90vw" }}
+                    </div>
+                    {{/if}}
+
+                    {{/kunstsammlung}}
+                    <!-- /kunstsammlung -->
+                    {{ else }}
+
+                    <!-- nachwuchskunst -->
+                    {{ ausgestellte_kuenstler }}
+                    {{bildergalerie:0 }}
+                    {{ partial:components/picture :image="bild" class="w-16 md:w-24 h-auto" cover="false" lazy="true"
+                    sizes="(min-width: 768px) 33vw,90vw" }}
+                    {{/bildergalerie:0}}
+                    {{ /ausgestellte_kuenstler }}
+                    <!-- /nachwuchskunst -->
+                    {{/if}}
+
+
+                    <!-- round label -->
+                    <div
+                        class="absolute top-0 left-0 flex items-center justify-center w-12 h-12 bg-primary rounded-full shadow-inner z-10 -translate-y-1/2 -translate-x-1/2">
+                        <span class="-rotate-12 text-[8px] text-center leading-none uppercase font-bold">
+                            {{eigene_sammlung ? 'kunst <br /> samm <br /> lung' : 'nach <br /> wuchs<br />kunst'}}
+                        </span>
+                    </div>
+                    <!-- /round label -->
+
+                </div>
+                <span class="h-2 w-1.5 bg-primary"></span>
+
+            </div>
+            {{/if}}
+
+
 
         </div>
 
-        <div class="flex justify-end">
-            <div class="flex flex-wrap flex-col lg:w-4/5">
-                <div class="relative py-8 px-4 border-4 border-primary text-center mt-6">
-                    <p class="font-headings">{{ adresse:street }}, {{adresse:postCode}} {{ adresse:city}}</p>
-                    <a>{{webadresse}}</a>
+        <div class="w-full md:w-2/6" x-data="{ showBooking: false }">
+            <div class="flex flex-col gap-4">
+                <div class="relative">
+                    <p class="font-headings mb-2">{{ adresse:street }}, {{adresse:postCode}} {{ adresse:city}}</p>
+                    <a href="http://{{webadresse}}" target="_blank" class="text-link">{{webadresse}}</a>
+                </div>
+
+                {{if besichtigung}}
+                <div class="frame frame-sm frame-primary relative">
+                    <div class="frame-head">
+                        <span class="grow"></span>
+                        <div class="font-headings heading-xs -translate-y-1/2">Besichtigung</div>
+                        <span class="grow"></span>
+
+                        </div>
+                    <div class="grid grid-cols-2 pb-4">
+                        {{besichtigung}}
+                        <div class="justify-self-center">
+                            <span class="text-sm">{{datum iso_format="dd,DD.MM.YYYY"}}</span>
+                            <p class="font-headings">{{zeit_start}} - {{zeit_ende}}</p>
+                        </div>
+                        {{/besichtigung}}
+                    </div>
+                </div>
+                {{/if}}
+                <button class="btn btn-primary mt-4" @click="showBooking = !showBooking">Führung buchen</button>
+            </div>
+
+
+
+            <!-- führung overlay -->
+            <div class="fixed inset-0 z-50"  :class="{ 'flex flex-col': showBooking, 'hidden': !showBooking }">
+                <div class="fixed inset-0 -z-10" @click="showBooking = !showBooking"></div>
+                <div class="fixed w-80 h-full right-0 bg-white shadow-2xl">
+                <!-- Calendly Inline-Widget Beginn -->
+                <div class="calendly-inline-widget h-full" data-url="https://calendly.com/add-art/giraffentoast?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;"></div>
+                <!-- Calendly Inline-Widget Ende -->
                 </div>
             </div>
+
         </div>
 
     </div>
-</div>
-
-<div class="max-w-6xl mx-auto">
-    <h2 class="heading-lg mb-4 text-primary">Unternehmen</h2>
-                        {{ beschreibung_unternehmen }}
-
-</div>
+</section>
 
 
-<div class="max-w-6xl mx-auto">
-    <h2 class="heading-lg mb-4 text-primary">Kunst</h2>
+<!-- section Unternehmen -->
+<section class="max-w-6xl mx-auto flex mt-16">
+    <div class="w-5/6 md:ml-32">
+        <div class="md:-translate-x-16">
+            <h2 class="heading-lg mb-4 text-primary">Unternehmen</h2>
+            <div class="grid gap-8 md:grid-cols-5">
+                <div class="md:col-span-3">
+                    {{ beschreibung_unternehmen }}
+                </div>
+                <div class="md:col-span-2 columns-2">
+                    {{bilder_unternehmen}}
+                    {{ partial:components/picture :image="url" cover="false" class="mb-4" sizes="(min-width: 768px) 33vw, 90vw" }}
+                    {{/bilder_unternehmen}}
+                </div>
 
-    {{if eigene_sammlung }}
-    <div class="relative md:w-3/4">{{beschreibung_kunst}} </div>
-    <div class="columns-4">
-        {{kunstsammlung}}
-        {{bild}}
-        <div class="flex flex-col break-inside-avoid mb-12">
-            <img src="{{ url }}" alt="{{ alt }}">
-            <span>Simon Nelke</span>
+            </div>
         </div>
-        {{/bild}}
-        {{/kunstsammlung}}
+
     </div>
 
+</section>
 
-    {{ else }}
+<!-- section Kunst -->
+{{if eigene_sammlung OR ausgestellte_kuenstler }}
 
-    {{ ausgestellte_kuenstler }}
-    <div class="mb-16">
-        <h3 class="heading-sm mb-2">{{title}}</h3>
-        <div class="relative md:w-3/4">{{kuenstler_beschreibung}} </div>
-        <div class="columns-2 md:columns-4">
-            {{bildergalerie}}
-            {{bild}}
-            <img src="{{ url }}" alt="{{ alt }}" class="w-full">
-            {{/bild}}
-            {{/bildergalerie}}
+<section class="max-w-6xl mx-auto flex mt-16">
+
+    <div class="md:w-5/6 md:ml-32">
+        <div class="mb-8 md:-translate-x-16">
+            <h2 class="heading-lg mb-4 text-primary">Kunst</h2>
+            {{ vorschau }}
         </div>
+
+
+        {{if eigene_sammlung }}
+        <div class="mb-16 frame frame-md frame-primary pb-8">
+            <div class="frame-head">
+                <span></span>
+                <h3 class="heading-sm -translate-y-1/2">Sammlung</h3>
+                <span class="grow"></span>
+            </div>
+            <div class="relative px-4 mb-4">{{beschreibung_kunst}} </div>
+            <div class="columns-2 md:columns-4 px-8">
+                {{kunstsammlung}}
+                <div class="flex flex-col break-inside-avoid mb-4">
+                    {{ partial:components/picture :image="bild" cover="true" lazy="true" sizes="(min-width: 768px) 33vw,90vw" }}
+                    <span class="text-xs italic">{{bildunterschrift}}</span>
+                </div>
+                {{/kunstsammlung}}
+            </div>
+        </div>
+
+        {{ else }}
+
+        {{ ausgestellte_kuenstler }}
+        <div class="mb-16 frame frame-md frame-primary pb-8">
+            <div class="frame-head">
+                <span></span>
+                <h3 class="heading-sm -translate-y-1/2">{{title}}</h3>
+                <span class="grow"></span>
+            </div>
+            <div class="relative px-4 mb-4">{{kuenstler_beschreibung}} </div>
+            <div class="columns-2 md:columns-4 break-inside-avoid px-8">
+                {{bildergalerie}}
+                {{bild}}
+                {{ partial:components/picture :image="bild" cover="true" lazy="true" sizes="(min-width: 768px) 33vw,90vw"class="mb-4" }}
+                {{/bild}}
+                {{/bildergalerie}}
+            </div>
+        </div>
+        {{ /ausgestellte_kuenstler }}
+
+        {{/if}}
     </div>
-    {{ /ausgestellte_kuenstler }}
+</section>
+{{/if }}
 
-    {{/if}}
-</div>
 
-<div class="max-w-6xl mx-auto">
+<!-- section beitraege -->
+{{if verlinkte_beitraege }}
+
+<section class="max-w-6xl mx-auto mt-12">
     <h2 class="heading-lg mb-4 text-primary">Magazin</h2>
 
-</div>
+    <div class="grid grid-cols-6 gap-4">
+        {{ verlinkte_beitraege }}
+        <a href="{{url}}"
+            class="flex flex-col p-2 md:even:translate-y-16 transition-colors bg-primary hover:bg-black hover:text-white group/item">
+
+            <div class="ratio-1/1">
+                <img class="" src="{{ bild:url }}" alt="{{ bild:alt }}">
+                <div class="absolute inset-0"></div>
+                <h3 class="absolute bottom-0 right-0 text-3xl text-right text-white p-4">{{title}}</h3>
+            </div>
+
+            <div class="relative px-4">
+                <strong>{{ date iso_format="MMMM, YYYY" }}</strong>
+                <p>{{kurzbeschreibung}}</p>
+            </div>
+        </a>
+        {{ /verlinkte_beitraege }}
+    </div>
+
+</section>
+{{/if}}

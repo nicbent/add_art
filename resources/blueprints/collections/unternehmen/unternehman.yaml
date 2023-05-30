@@ -55,57 +55,7 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
-      -
-        handle: besichtigungszeiten
-        field:
-          fields:
-            -
-              handle: datum
-              field:
-                mode: single
-                time_enabled: false
-                time_seconds_enabled: false
-                full_width: false
-                inline: false
-                columns: 1
-                rows: 1
-                display: Datum
-                type: date
-                icon: date
-                width: 33
-                listable: hidden
-                instructions_position: above
-                visibility: visible
-            -
-              handle: zeit_start
-              field:
-                seconds_enabled: false
-                display: 'Zeit Start'
-                type: time
-                icon: time
-                width: 33
-                listable: hidden
-                instructions_position: above
-                visibility: visible
-            -
-              handle: zeit_ende
-              field:
-                seconds_enabled: false
-                display: 'Zeit Ende'
-                type: time
-                icon: time
-                width: 33
-                listable: hidden
-                instructions_position: above
-                visibility: visible
-          mode: stacked
-          reorderable: true
-          display: Besichtigungszeiten
-          type: grid
-          icon: grid
-          listable: hidden
-          instructions_position: above
-          visibility: visible
+          instructions: 'Ohne http:// oder https://'
       -
         handle: vorschau
         field:
@@ -202,6 +152,8 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+          unless:
+            eigene_sammlung: 'equals true'
       -
         handle: beschreibung_kunst
         field:
@@ -212,6 +164,7 @@ sections:
           buttons:
             - bold
             - italic
+            - unorderedlist
           save_html: false
           inline: false
           toolbar_mode: fixed
@@ -231,6 +184,8 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+          if:
+            eigene_sammlung: 'equals true'
       -
         handle: kunstsammlung
         field:
@@ -271,6 +226,22 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+          add_row: 'Bild hinzufügen'
+          if:
+            eigene_sammlung: 'equals true'
+      -
+        handle: verlinkte_beitraege
+        field:
+          mode: default
+          create: true
+          collections:
+            - magazin
+          display: 'Verlinkte Beitraege'
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
+          visibility: visible
   sidebar:
     display: Sidebar
     fields:
@@ -280,16 +251,77 @@ sections:
           type: slug
           localizable: true
       -
-        handle: teilnahmejahr
+        handle: date
         field:
-          type: terms
-          taxonomies:
-            - teilnahmejahr
-          display: Teilnahmejahr
-          mode: select
+          type: date
+          required: true
+          validate:
+            - required
+          display: Teilnahme
           instructions_position: above
           listable: hidden
           visibility: visible
-          max_items: 1
-          create: true
+          mode: single
+          time_enabled: false
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+  visits_and_guides:
+    display: 'Besichtigungs- & Führungszeiten'
+    fields:
+      -
+        handle: besichtigung
+        field:
+          fields:
+            -
+              handle: datum
+              field:
+                mode: single
+                time_enabled: false
+                time_seconds_enabled: false
+                full_width: false
+                inline: false
+                columns: 1
+                rows: 1
+                display: Datum
+                type: date
+                icon: date
+                width: 33
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+            -
+              handle: zeit_start
+              field:
+                seconds_enabled: false
+                display: 'Zeit Start'
+                type: time
+                icon: time
+                width: 33
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+            -
+              handle: zeit_ende
+              field:
+                seconds_enabled: false
+                display: 'Zeit Ende'
+                type: time
+                icon: time
+                width: 33
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+          mode: stacked
+          reorderable: false
+          display: Besichtigung
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          min_rows: 0
+          max_rows: 4
 title: Unternehmen

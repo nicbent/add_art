@@ -9,22 +9,43 @@ fields:
         bg-black: Schwarz
         bg-white: Weiß
         bg-transparent: Transparent
-      width: 25
+      width: 50
   -
     handle: typ
     field:
       options:
-        standard: null
-        zitat: null
-        rahmen: null
+        standard: Standard
+        rahmen: Rahmen
       default: standard
       display: Typ
       type: button_group
       icon: button_group
-      width: 25
+      width: 50
       listable: hidden
       instructions_position: above
       visibility: visible
+  -
+    handle: headline
+    field:
+      input_type: text
+      antlers: false
+      display: Headline
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      width: 33
+  -
+    handle: textgroesse
+    field: common.textgroesse
+    config:
+      width: 25
+  -
+    handle: textfarbe
+    field: common.textfarbe
+    config:
+      width: 25
   -
     handle: inhalt
     field:

@@ -188,3 +188,43 @@ fields:
       listable: hidden
       instructions_position: above
       visibility: visible
+  -
+    handle: textfarbe
+    field:
+      options:
+        text-black: schwarz
+        text-primary: primär
+        text-white: weiss
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Textfarbe
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: textgroesse
+    field:
+      options:
+        sm: null
+        md: null
+        lg: null
+        xl: null
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: md
+      display: Textgröße
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible

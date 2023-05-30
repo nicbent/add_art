@@ -7,7 +7,7 @@ preferences:
     unternehmen:
       columns:
         - title
-        - teilnahmejahr
+        - date
         - slug
         - logo
         - ausgestellte_kuenstler
@@ -21,3 +21,4 @@ preferences:
   assets:
     images:
       mode: grid
+      per_page: 500

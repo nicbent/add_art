@@ -10,7 +10,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
-updated_at: 1683789887
+updated_at: 1684570447
 page_builder:
   -
     id: lgkzdai3
@@ -50,7 +50,10 @@ page_builder:
         hintergrund: bg-primary
         inhalt:
           -
-            type: paragraph
+            type: heading
+            attrs:
+              class: null
+              level: 3
             content:
               -
                 type: text
