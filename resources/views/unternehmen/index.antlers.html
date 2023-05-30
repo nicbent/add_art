@@ -1,7 +1,7 @@
     <section class="max-w-6xl mx-auto flex gap-16">
-        <h1 class="heading-xl">Unternehmen <span class="heading-lg block">und Kunst  {{ add_art_settings:content_from_year:title }}</span></h1>
+        <h1 class="heading-xl">Unternehmen <br>& Kunst <span>{{ add_art_settings:content_from_year:title }}</span></h1>
         <div class="flex gap-16">
-            <div class="md:columns-2 mt-4">
+            <div class="md:columns-3 mt-4">
                 {{ collection:unternehmen date:contains="{{ add_art_settings:content_from_year:title }}" sort="title" }}
                 <a class="block text-lg font-headings hover:underline" href="#{{title}}">{{ title }}</a>
                 {{ /collection:unternehmen }}
@@ -66,9 +66,8 @@
                         cover="false" lazy="true" sizes="(min-width: 768px) 33vw,90vw" }}
                         {{else}}
     
-                        <div class="h-8 w-full -z-[{{index}}] {{shadow}} bg-white">
-                            {{ partial:components/picture :image="bild" class="{{opacity}} object-right md:object-bottom"
-                            cover="true" lazy="true" sizes="(min-width: 768px) 33vw,90vw" }}
+                        <div class="h-8 w-14 -z-[{{index}}] {{shadow}} bg-white">
+                            {{ partial:components/picture :image="bild" class="{{opacity}} object-right md:object-bottom" cover="true" lazy="true" sizes="(min-width: 768px) 33vw,90vw" }}
                         </div>
                         {{/if}}
     
@@ -107,7 +106,7 @@
            
             </div>
     
-            <div class="md:w-1/3 text-center md:group-odd:text-left md:group-even:text-right">
+            <div class="md:w-1/6 text-center md:group-odd:text-left md:group-even:text-right">
                 <div class="flex flex-col gap-4">
                     <p>{{ vorschau }}</p>
             
