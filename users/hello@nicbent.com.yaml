@@ -11,14 +11,15 @@ preferences:
         - slug
         - logo
         - ausgestellte_kuenstler
+        - webadresse
     kuenstler:
       columns:
         - title
         - teilnahmejahr
         - slug
+        - kuenstler_beschreibung
     magazin:
       per_page: 100
   assets:
     images:
-      mode: grid
       per_page: 500

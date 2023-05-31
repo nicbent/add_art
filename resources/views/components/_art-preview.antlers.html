@@ -1,0 +1,51 @@
+<!-- kunst -->
+{{if eigene_sammlung OR ausgestellte_kuenstler }}
+<div class="art-preview z-10">
+    <span class="line"></span>
+    <div class="art-preview-inner {{ausgestellte_kuenstler ? 'gap-2': 'gap-0'}}">
+
+        {{shadow = 'shadow-[0px_8px_4px_-4px_rgba(0,0,0,0.8)]'}}
+        {{imageWidth = 'w-12 md:w-16'}}
+
+        {{if eigene_sammlung }}
+        <!-- kunstsammlung -->
+        {{kunstsammlung| limit(5) | shuffle }}
+        {{opacity = 'opacity-['+(1-(+'0.'+index))+']'}}
+
+        {{if index === 0}}
+        <figure class="{{imageWidth}} {{shadow}} h-auto">
+            <img src="{{ glide :src="bild" format="webp" }}" />
+        </figure>
+        {{else}}
+        <figure class="{{imageWidth}} {{shadow}} h-8 -z-[{{index}}]">
+            <img src="{{ glide :src="bild" format="webp" }}" class="object-cover object-bottom w-full h-full" />
+        </figure>
+
+        {{/if}}
+        {{/kunstsammlung}}
+        <!-- /kunstsammlung -->
+        {{ else }}
+
+        <!-- nachwuchskunst -->
+        {{ ausgestellte_kuenstler }}
+        {{bildergalerie:0 }}
+        <figure class="{{imageWidth}} {{shadow}} h-auto">
+            <img src="{{ glide :src="bild" format="webp" }}" />
+        </figure>
+        {{/bildergalerie:0}}
+        {{ /ausgestellte_kuenstler }}
+        <!-- /nachwuchskunst -->
+        {{/if}}
+
+
+        <!-- batch -->
+        <div class="batch">
+            <span>{{eigene_sammlung ? 'kunst <br /> samm <br /> lung' : 'nach <br />wuchs<br />kunst'}}</span>
+        </div>
+        <!-- /batch -->
+
+    </div>
+    <span class="line"></span>
+</div>
+{{/if}}
+<!-- /kunst -->

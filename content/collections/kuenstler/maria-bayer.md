@@ -5,7 +5,7 @@ title: 'Maria Bayer'
 teilnahmejahr:
   - '2022'
 updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
-updated_at: 1681411583
+updated_at: 1685524980
 grosses_bild: stimme-machler_f3a1944.jpg
 kleines_bild: stimme-machler_f3a1947.jpg
 bildergalerie:
@@ -30,4 +30,17 @@ bildergalerie:
   -
     id: lgfh0v1c
     bild: maria_bayer_7.jpg
+kuenstler_beschreibung:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'Maria Bayer '
+      -
+        type: text
+        text: 'setzt sich mit der Natur auseinander. Die Eindrücke realer Orte übersetzt sie mit gestischem Duktus in farbreiche Flächen, die abstrahierte Landschaften entstehen lassen.'
 ---

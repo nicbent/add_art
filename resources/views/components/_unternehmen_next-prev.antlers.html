@@ -1,0 +1,59 @@
+<a href="{{url}}" class="relative w-full md:w-1/5 border-b-[6px] border-primary {{type === 'next' ? "border-l-[6px]":"border-r-[6px]"}}">
+
+    <!-- logo -->
+    <div class="absolute flex gap-4 w-full z-10">
+        <span class="grow h-1.5 bg-primary"></span>
+        <div class="w-24 max-h-12 -translate-y-1/2">
+            <img class="w-full h-full object-contain" src="{{ logo:url }}" alt="{{ alt }}">
+        </div>
+        <span class="grow h-1.5 bg-primary"></span>
+    </div>
+    <!-- /logo -->
+
+    <!-- title -->
+    <div class="absolute w-2/3 flex flex-col h-full z-10 {{type === 'next' ? "items-end right-0":"items-start left-0"}}">
+        <span class="grow w-1.5 bg-primary"></span>
+            <h4 class="heading-sm text-primary mb-0  {{type === 'next' ? "text-right":"text-left"}}">{{ title }}</h4>
+        <span class="grow w-1.5 bg-primary"></span>
+    </div>
+    <!-- /title -->
+
+<!-- bild unternehmen -->
+<div class="relative w-full p-4">
+    <div class="ratio-4/5">
+        <img src="{{ glide :src="bilder_unternehmen:0" }}" class="object-cover w-full h-full" />
+    </div>
+</div>
+<!-- /bild unternehmen -->
+
+
+</a>
+
+
+
+
+
+<!-- section Previous/Next -->
+<section class="max-w-6xl mx-auto">
+    <h2 class="heading-sm mb-4 text-primary">Weitere Unternehmen</h2>
+
+    <div class="flex items-center justify-center gap-8 md:gap-32">
+{{ collection:previous in="unternehmen" as="posts" limit="1" sort="order" }}
+ 
+  {{ posts }}
+  {{ partial:components/unternehmen_next-prev type="previous" }}
+  {{ /posts }}
+ 
+{{ /collection:previous }}
+
+
+{{ collection:next in="unternehmen" as="posts" limit="1" sort="order" }}
+ 
+  {{ posts }}
+  {{ partial:components/unternehmen_next-prev type="next" }}
+  {{ /posts }}
+ 
+{{ /collection:next }}
+</div>
+</section>
+<!-- section /Previous/Next -->

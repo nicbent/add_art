@@ -3,7 +3,7 @@ id: 72ed4a63-ef0a-4424-9edd-2335697ff8dd
 blueprint: kuenstler
 title: 'Irina Prager'
 updated_by: 4d1bba3c-2e7b-401b-b23b-dae97edaf7bf
-updated_at: 1681410990
+updated_at: 1685524955
 teilnahmejahr:
   - '2022'
 bildergalerie:
@@ -25,4 +25,17 @@ bildergalerie:
   -
     id: lgfgoon7
     bild: irina_prager_6.jpg
+kuenstler_beschreibung:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'Irina Prager '
+      -
+        type: text
+        text: 'schafft atmosphärische Welten durch farbintensiven Realismus. Sie interessiert sich für die menschliche Psyche.'
 ---
