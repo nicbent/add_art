@@ -3,33 +3,26 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Statamic\Fieldtypes\Section;
-use Studio1902\PeakSeo\Handlers\ErrorPage;
+use Statamic\Statamic;
 
 class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         //
     }
 
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
-        // Statamic::script('app', 'cp');
-        // Statamic::style('app', 'cp');
-
-        Section::makeSelectableInForms();
-
-        ErrorPage::handle404AsEntry();
+        // Statamic::vite('app', [
+        //     'resources/js/cp.js',
+        //     'resources/css/cp.css',
+        // ]);
     }
 }

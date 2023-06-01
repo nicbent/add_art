@@ -21,11 +21,6 @@ sections:
         import: hero
       -
         import: page_builder
-  seo:
-    display: SEO
-    fields:
-      -
-        import: 'statamic-peak-seo::seo'
   sidebar:
     display: Sidebar
     fields:
